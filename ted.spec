@@ -39,7 +39,6 @@ BuildRequires:	motif-devel
 Requires:	%{name}-common = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Ted is a text processor running under X Window on Unix/Linux systems.
