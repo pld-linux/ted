@@ -243,6 +243,9 @@ Szwedzki (sv_SE) s³ownik ortograficzny dla Teda.
 %patch -p1
 
 %build
+if [ -f %{_pkgconfigdir}/libpng12.pc ] ; then
+	CFLAGS="%{rpmcflags} `pkg-config libpng12 --cflags`"
+fi
 for d in bitmap ind libreg appUtil appFrame Ted; do
 	cd $d
 	autoconf
