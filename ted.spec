@@ -2,7 +2,7 @@ Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
 Version:	2.12
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
@@ -11,27 +11,32 @@ Source2:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_da_DK.tar.gz
 Source3:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_de_DE.tar.gz
 Source4:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_en_GB.tar.gz
 Source5:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_es_ES.tar.gz
-Source6:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_fr_FR.tar.gz
-Source7:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_hu_HU.tar.gz
-Source8:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_it_IT.tar.gz
-Source9:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_nl_NL.tar.gz
-Source10:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_no_NO.tar.gz
-Source11:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pl_PL.tar.gz
-Source12:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_PT.tar.gz
-Source13:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
-Source14:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
-Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
-Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
-Source17:	Ted.ad.pl_PL
+Source6:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_eu_FR.tar.gz
+Source7:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_fr_FR.tar.gz
+Source8:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_hu_HU.tar.gz
+Source9:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_it_IT.tar.gz
+Source10:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_mg_MG.tar.gz
+Source11:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_nl_NL.tar.gz
+Source12:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_no_NO.tar.gz
+Source13:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_oc_FR.tar.gz
+Source14:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pl_PL.tar.gz
+Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_PT.tar.gz
+Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
+Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
+Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
+Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
+Source20:	Ted.ad.pl_PL
 Patch0:		%{name}-paths.patch
+Patch1:		%{name}-gtklocale.patch
 URL:		http://www.nllgg.nl/Ted/
-BuildRequires:	autoconf
 BuildRequires:	XFree86-devel >= 4.0
+BuildRequires:	autoconf
+BuildRequires:	gtk+-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	motif-devel
-#BuildRequires:	gtk+-devel
+Requires:	%{name}-common = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -46,11 +51,34 @@ Ted jest procesorem tekstu dzia³aj±cym pod X Window pod unices. S³u¿y
 do edycji dokumentów tekstowych w stylu WYSIWYG. Mo¿e obrabiaæ pliki w
 formacie MS RTF i drukowaæ w PostScripcie.
 
+%package gtk
+Summary:	Ted with GTK+-based interface
+Summary(pl):	Ted z interfejsem opartym na GTK+
+Group:		X11/Applications/Editors
+Requires:	%{name}-common = %{version}
+
+%description gtk
+Ted with interface based on GTK+ instead of Motif.
+
+%description gtk -l pl
+Ted z interfejsem opartym na GTK+, a nie na Motifie.
+
+%package common
+Summary:	Common package for both Ted interfaces
+Summary(pl):	Wspólny pakiet dla obu interfejsów Teda
+Group:		X11/Applications/Editors
+
+%description common
+Common package for both Ted interfaces.
+
+%description common -l pl
+Wspólny pakiet dla obu interfejsów Teda.
+
 %package spelling-cs
 Summary:	Czech spelling dictionary for Ted
 Summary(pl):	Czeski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-cs
 Czech (cs_CZ) spelling dictionary for Ted.
@@ -62,7 +90,7 @@ Czeski (cs_CZ) s³ownik ortograficzny dla Teda.
 Summary:	Danish spelling dictionary for Ted
 Summary(pl):	Duñski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-da
 Danish (da_DK) spelling dictionary for Ted.
@@ -74,7 +102,7 @@ Duñski (da_DK) s³ownik ortograficzny dla Teda.
 Summary:	German spelling dictionary for Ted
 Summary(pl):	Niemiecki s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-de
 German (de_DE) spelling dictionary for Ted.
@@ -86,7 +114,7 @@ Niemiecki (de_DE) s³ownik ortograficzny dla Teda.
 Summary:	English (UK) spelling dictionary for Ted
 Summary(pl):	Angielski (brytyjski) s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-en_GB
 English (UK - en_GB) spelling dictionary for Ted.
@@ -98,7 +126,7 @@ Angielski (brytyjski - en_GB) s³ownik ortograficzny dla Teda.
 Summary:	English (US) spelling dictionary for Ted
 Summary(pl):	Angielski (amerykañski) s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-en_US
 English (en_US) spelling dictionary for Ted.
@@ -110,7 +138,7 @@ Angielski (amerykañski - en_US) s³ownik ortograficzny dla Teda.
 Summary:	Spanish spelling dictionary for Ted
 Summary(pl):	Hiszpañski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-es
 Spanish (es_ES) spelling dictionary for Ted.
@@ -122,7 +150,7 @@ Hiszpañski (es_ES) s³ownik ortograficzny dla Teda.
 Summary:	French spelling dictionary for Ted
 Summary(pl):	Francuski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-fr
 French (fr_FR) spelling dictionary for Ted.
@@ -134,7 +162,7 @@ Francuski (fr_FR) s³ownik ortograficzny dla Teda.
 Summary:	Italian spelling dictionary for Ted
 Summary(pl):	W³oski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-it
 Italian (it_IT) spelling dictionary for Ted.
@@ -146,7 +174,7 @@ W³oski (it_IT) s³ownik ortograficzny dla Teda.
 Summary:	Dutch spelling dictionary for Ted
 Summary(pl):	Holenderski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-nl
 Dutch (nl_NL) spelling dictionary for Ted.
@@ -158,7 +186,7 @@ Holenderski (nl_NL) s³ownik ortograficzny dla Teda.
 Summary:	Norwegian spelling dictionary for Ted
 Summary(pl):	Norweski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-no
 Norwegian (no_NO) spelling dictionary for Ted.
@@ -170,7 +198,7 @@ Norweski (no_NO) s³ownik ortograficzny dla Teda.
 Summary:	Polish spelling dictionary for Ted
 Summary(pl):	Polski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-pl
 Polish (pl_PL) spelling dictionary for Ted.
@@ -182,7 +210,7 @@ Polski (pl_PL) s³ownik ortograficzny dla Teda.
 Summary:	Portuguese spelling dictionary for Ted
 Summary(pl):	Portugalski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-pt
 Portuguese (pt_PT) spelling dictionary for Ted.
@@ -194,7 +222,7 @@ Portugalski (pt_PT) s³ownik ortograficzny dla Teda.
 Summary:	Russian spelling dictionary for Ted
 Summary(pl):	Rosyjski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-ru
 Russian (ru_RU) spelling dictionary for Ted.
@@ -206,7 +234,7 @@ Rosyjski (ru_RU) s³ownik ortograficzny dla Teda.
 Summary:	Slovak spelling dictionary for Ted
 Summary(pl):	S³owacki s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-sk
 Slovak (sk_SK) spelling dictionary for Ted.
@@ -218,7 +246,7 @@ S³owacki (sk_SK) s³ownik ortograficzny dla Teda.
 Summary:	Slovene spelling dictionary for Ted
 Summary(pl):	S³oweñski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-sl
 Slovene (sl_SI) spelling dictionary for Ted.
@@ -230,7 +258,7 @@ S³oweñski (sl_SI) s³ownik ortograficzny dla Teda.
 Summary:	Swedish spelling dictionary for Ted
 Summary(pl):	Szwedzki s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name} = %{version}
+Requires:	%{name}-common = %{version}
 
 %description spelling-sv
 Swedish (sv_SE) spelling dictionary for Ted.
@@ -239,13 +267,11 @@ Swedish (sv_SE) spelling dictionary for Ted.
 Szwedzki (sv_SE) s³ownik ortograficzny dla Teda.
 
 %prep
-%setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16
-%patch -p1
+%setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19
+%patch0 -p1
+%patch1 -p1
 
 %build
-if [ -f %{_pkgconfigdir}/libpng12.pc ] ; then
-	CFLAGS="%{rpmcflags} `pkg-config libpng12 --cflags`"
-fi
 for d in bitmap ind libreg appUtil appFrame Ted; do
 	cd $d
 	autoconf
@@ -253,16 +279,15 @@ for d in bitmap ind libreg appUtil appFrame Ted; do
 	cd ..
 done
 %{__make} compile.shared
-##mv -f Ted/Ted Ted.motif
+mv -f Ted/Ted Ted.motif
 
-# gtk part commented out - gtk port is not complete!
-##for d in appFrame Ted; do
-##	cd $d
-##	rm -f *.o
-##	%%configure --with-GTK
-##	cd ..
-##done
-##%{__make} compile.shared
+for d in appFrame Ted; do
+	cd $d
+	rm -f *.o
+	%configure --with-GTK
+	cd ..
+done
+%{__make} compile.shared
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -272,43 +297,56 @@ cd tedPackage
 tar xf TedBindist.tar
 cd ..
 
-##install Ted.motif $RPM_BUILD_ROOT%{_bindir}
-##install Ted/Ted $RPM_BUILD_ROOT%{_bindir}/Ted.gtk
-install Ted/Ted $RPM_BUILD_ROOT%{_bindir}
+install Ted.motif $RPM_BUILD_ROOT%{_bindir}/Ted
+install Ted/Ted $RPM_BUILD_ROOT%{_bindir}/Ted.gtk
 install tedPackage/afm/* $RPM_BUILD_ROOT%{_datadir}/Ted/afm
 install tedPackage/ind/* ind/*.ind $RPM_BUILD_ROOT%{_datadir}/Ted/ind
 install tedPackage/Ted/TedDocument-en_US.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
 
-cd Ted/ad
-for f in cs da de fr hu it nl sk ; do
+cd Ted
+install TedDocument-*.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
+cd ad
+for f in cs da de eu fr hu it mg nl oc sk ; do
 	tar xf Ted_${f}_*.tar
 	install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}
 	# comment out evil paths
 	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
 		> $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}/Ted
 done
-cd ../..
 install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl
-install %{SOURCE17} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Ted
+install %{SOURCE20} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Ted
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/Ted
+
+%files gtk
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/Ted.gtk
+
+%files common
+%defattr(644,root,root,755)
 %doc README 
-%attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/Ted
 %{_datadir}/Ted/afm
 %dir %{_datadir}/Ted/ind
-%{_datadir}/Ted/TedDocument*
+%lang(de) %{_datadir}/Ted/TedDocument-de_DE.rtf
+%{_datadir}/Ted/TedDocument-en_US.rtf
+%lang(fr) %{_datadir}/Ted/TedDocument-fr_FR.rtf
+%lang(mg) %{_datadir}/Ted/TedDocument-mg_MG.rtf
 %lang(cs) %{_libdir}/X11/app-defaults/cs/Ted
 %lang(da) %{_libdir}/X11/app-defaults/da/Ted
 %lang(de) %{_libdir}/X11/app-defaults/de/Ted
+%lang(eu) %{_libdir}/X11/app-defaults/eu/Ted
 %lang(fr) %{_libdir}/X11/app-defaults/fr/Ted
 %lang(hu) %{_libdir}/X11/app-defaults/hu/Ted
 %lang(it) %{_libdir}/X11/app-defaults/it/Ted
+%lang(mg) %{_libdir}/X11/app-defaults/mg/Ted
 %lang(nl) %{_libdir}/X11/app-defaults/nl/Ted
+%lang(oc) %{_libdir}/X11/app-defaults/oc/Ted
 %lang(pl) %{_libdir}/X11/app-defaults/pl/Ted
 %lang(sk) %{_libdir}/X11/app-defaults/sk/Ted
 

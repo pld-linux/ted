@@ -1,0 +1,55 @@
+--- Ted-2.12/appFrame/appGuiGtkX.c.orig	Sun Dec  1 09:17:06 2002
++++ Ted-2.12/appFrame/appGuiGtkX.c	Fri Dec 27 14:32:50 2002
+@@ -3,6 +3,8 @@
+ #   include	<stdlib.h>
+ #   include	<stdio.h>
+ #   include	<string.h>
++#   include	<unistd.h>
++#   include	<locale.h>
+ 
+ #   include	<appSystem.h>
+ 
+@@ -101,7 +103,7 @@
+     static const char		xdefs[]= ".Xdefaults";
+     const int			xdefl= sizeof( xdefs )- 1;
+ 
+-    static const char		xlibs[]= "/usr/lib/X11";
++    static const char		xlibs[]= "/usr/X11R6/lib/X11";
+     const int			xlibl= sizeof( xlibs )- 1;
+ 
+     static const char		adefs[]= "app-defaults";
+@@ -119,17 +121,32 @@
+ 
+ 	/*  7  */
+ 	db= (XrmDatabase)0;
+-	lang= getenv( "LANG" );
++	lang= strdup(setlocale( LC_MESSAGES, NULL ));
+ 	if  ( lang && xlibl+ 1+ strlen( lang )+ 1+ adefl+ 1+ appl <= NAML )
+ 	    {
++	    if  ( strchr( lang, '.' ) != NULL )
++		*strchr( lang, '.' ) = 0;
++	    else if  ( strchr(lang, '@' ) != NULL )
++		*strchr( lang, '@' ) = 0;
+ 	    sprintf( name, "%s/%s/%s/%s",
+ 				xlibs,
++				adefs,
+ 				lang,
++				ea->eaApplicationName );
++	    if  ( access( name, R_OK ) && strchr( lang, '_' )) {
++		*strchr( lang, '_' ) = 0;
++		sprintf( name, "%s/%s/%s/%s",
++				xlibs,
+ 				adefs,
++				lang,
+ 				ea->eaApplicationName );
+-
++	    }
+ 	    db= XrmGetFileDatabase( name );
+ 	    }
++	if  ( lang != NULL )
++	    free( lang );
++	lang = getenv( "LANG" );
++	
+ 	if  ( ! db && xlibl+ 1+ adefl+ 1+ appl <= NAML )
+ 	    {
+ 	    sprintf( name, "%s/%s/%s",
