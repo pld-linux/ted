@@ -63,7 +63,7 @@ BuildRequires:	motif-devel
 Requires:	%{name}-common = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		addir	/usr/X11R6/lib/X11/app-defaults
+%define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
 
 %description
 Ted is a text processor running under X Window on Unix/Linux systems.
@@ -333,15 +333,15 @@ cd ad
 # pt is pt_BR here, but there is no pt_PT translation
 for f in cs da de eu fr hu it mg nl no oc pl pt sk ; do
 	tar xf Ted_${f}_*.tar
-	install -d $RPM_BUILD_ROOT%{addir}/${f}
+	install -d $RPM_BUILD_ROOT%{_appdefsdir}/${f}
 	# comment out evil paths
 	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
-		> $RPM_BUILD_ROOT%{addir}/${f}/Ted
+		> $RPM_BUILD_ROOT%{_appdefsdir}/${f}/Ted
 done
 
 # use latin2 font for pl_PL messages
 echo 'Ted*fontList:	-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2' \
-	>> $RPM_BUILD_ROOT%{addir}/pl/Ted
+	>> $RPM_BUILD_ROOT%{_appdefsdir}/pl/Ted
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -364,20 +364,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/Ted/TedDocument-en_US.rtf
 %lang(fr) %{_datadir}/Ted/TedDocument-fr_FR.rtf
 %lang(mg) %{_datadir}/Ted/TedDocument-mg_MG.rtf
-%lang(cs) %{addir}/cs/Ted
-%lang(da) %{addir}/da/Ted
-%lang(de) %{addir}/de/Ted
-%lang(eu) %{addir}/eu/Ted
-%lang(fr) %{addir}/fr/Ted
-%lang(hu) %{addir}/hu/Ted
-%lang(it) %{addir}/it/Ted
-%lang(mg) %{addir}/mg/Ted
-%lang(nl) %{addir}/nl/Ted
-%lang(no) %{addir}/no/Ted
-%lang(oc) %{addir}/oc/Ted
-%lang(pl) %{addir}/pl/Ted
-%lang(pt) %{addir}/pt/Ted
-%lang(sk) %{addir}/sk/Ted
+%lang(cs) %{_appdefsdir}/cs/Ted
+%lang(da) %{_appdefsdir}/da/Ted
+%lang(de) %{_appdefsdir}/de/Ted
+%lang(eu) %{_appdefsdir}/eu/Ted
+%lang(fr) %{_appdefsdir}/fr/Ted
+%lang(hu) %{_appdefsdir}/hu/Ted
+%lang(it) %{_appdefsdir}/it/Ted
+%lang(mg) %{_appdefsdir}/mg/Ted
+%lang(nl) %{_appdefsdir}/nl/Ted
+%lang(no) %{_appdefsdir}/no/Ted
+%lang(oc) %{_appdefsdir}/oc/Ted
+%lang(pl) %{_appdefsdir}/pl/Ted
+%lang(pt) %{_appdefsdir}/pt/Ted
+%lang(sk) %{_appdefsdir}/sk/Ted
 
 %files spelling-cs
 %defattr(644,root,root,755)
