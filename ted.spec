@@ -1,66 +1,71 @@
 # NOTE: remember to update i18n resources on each Source0 update!
 #       (tars are not versioned, but updated together with new ted version)
 #
+# TODO: fix locales in GTK+2 version (strings are encoded in legacy/mixed,
+#       gtk+2 expects utf-8)
+#
 Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
-Version:	2.14
-Release:	2
+Version:	2.16
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Editors
-Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
-# Source0-md5:	7ed8207cdc925ee7f8b8770ca0af3e52
-Source1:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_cs_CZ.tar.gz
-# Source1-md5:	7942ed59a701c20056fc86b3384fb638
-Source2:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_da_DK.tar.gz
-# Source2-md5:	9ab8e7495e8cbf4e7d5dc57f6007b08a
-Source3:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_de_DE.tar.gz
-# Source3-md5:	c283b5c1c70bec15149ba3ffbf271535
-Source4:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_en_GB.tar.gz
-# Source4-md5:	1c7a8fb09070aedf3c75d99f36632919
-Source5:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_es_ES.tar.gz
-# Source5-md5:	0b64b1251593736f36109ecce7e7dc74
-Source6:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_eu_FR.tar.gz
-# Source6-md5:	3d9a5b5f094e36e35ae9b7e25918cafd
-Source7:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_fr_FR.tar.gz
-# Source7-md5:	a8d2c8029de15a4136d9a155666e5c79
-Source8:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_hu_HU.tar.gz
-# Source8-md5:	12c10b461ca40b3ce0dcf82926c311ed
-Source9:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_it_IT.tar.gz
-# Source9-md5:	f175c23ecdae4f32656a49566af36b42
-Source10:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_mg_MG.tar.gz
-# Source10-md5:	04d34808a6b6613a3773ee9bd3b49c90
-Source11:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_nl_NL.tar.gz
-# Source11-md5:	98e71c2e7ff909417b9e316882bbc73e
-Source12:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_no_NO.tar.gz
-# Source12-md5:	40b35fe137d0618fb1b197ccdcbf0d9f
-Source13:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_oc_FR.tar.gz
-# Source13-md5:	d7a0d3d410dfe73ec48f050eb33c7d0d
-Source14:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pl_PL.tar.gz
-# Source14-md5:	532ce1d54259d2057f0e97a3efaf7866
-Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_BR.tar.gz
-# Source15-md5:	e26bda0ab2219a1235c57b9b74215165
-Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_PT.tar.gz
-# Source16-md5:	c56b9ca9e6b9d8849ced5b2de3872e65
-Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
-# Source17-md5:	6677c6d7ed4d7a511b7cdd02df52dc9c
-Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
-# Source18-md5:	1118b80cd609dc8115f512302a571fd4
-Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
-# Source19-md5:	884c40f7eddab26d6b878521fb55b03d
-Source20:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
-# Source20-md5:	1a61f9dccd1682581c33e8f99a66ba01
+Source0:	ftp://ftp.nluug.nl/pub/editors/ted/%{name}-%{version}.src.tar.gz
+# Source0-md5:	51f90201dbc117906a7c4cde691d4606
+Source1:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_cs_CZ.tar.gz
+# Source1-md5:	5d654419e3466450e7b73ffd05efebbf
+Source2:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_da_DK.tar.gz
+# Source2-md5:	7e0730dee0caf533b5cbe3627a459939
+Source3:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_de_DE.tar.gz
+# Source3-md5:	ced06a498be16d7bb4148b7ae96500a4
+Source4:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_en_GB.tar.gz
+# Source4-md5:	104408a5d5a515b6238a52a87c01d31f
+Source5:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_es_AR.tar.gz
+# Source5-md5:	546f412c0b9500559d5e815947aeb1f0
+Source6:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_es_ES.tar.gz
+# Source6-md5:	3c47ab39d07174f218a2c5945b8ea72f
+Source7:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_eu_FR.tar.gz
+# Source7-md5:	cfdcbaca8df70fb59cda4bfa56713b79
+Source8:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_fr_FR.tar.gz
+# Source8-md5:	ce75da9caacd300c558b009223399363
+Source9:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_hu_HU.tar.gz
+# Source9-md5:	9985453ce1b3170f8f04ee9f291a7476
+Source10:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_it_IT.tar.gz
+# Source10-md5:	688d5df679d69a99e85d30b6a5c06e0d
+Source11:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_mg_MG.tar.gz
+# Source11-md5:	2393e69231e0d973dbbbacf5a294ad59
+Source12:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_nl_NL.tar.gz
+# Source12-md5:	7db18dd2ae84fd7caf260119819d3b6b
+Source13:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_no_NO.tar.gz
+# Source13-md5:	328346a213fa14e4fbd8039b7c51afdb
+Source14:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_oc_FR.tar.gz
+# Source14-md5:	33eb4842034fb39cc7940cd5fd308ae9
+Source15:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pl_PL.tar.gz
+# Source15-md5:	daff2d8acc935f98935603168e55a038
+Source16:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pt_BR.tar.gz
+# Source16-md5:	a3a37037d043a130071ed6e83a81a63d
+Source17:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pt_PT.tar.gz
+# Source17-md5:	c56b9ca9e6b9d8849ced5b2de3872e65
+Source18:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_ru_RU.tar.gz
+# Source18-md5:	6677c6d7ed4d7a511b7cdd02df52dc9c
+Source19:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_sk_SK.tar.gz
+# Source19-md5:	443fb81c1de3109cae6239812aa2b933
+Source20:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_sl_SI.tar.gz
+# Source20-md5:	884c40f7eddab26d6b878521fb55b03d
+Source21:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_sv_SE.tar.gz
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
 URL:		http://www.nllgg.nl/Ted/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	autoconf
-BuildRequires:	gtk+-devel
+BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libpng-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	motif-devel
-Requires:	%{name}-common = %{version}
+BuildRequires:	pkgconfig
+Requires:	%{name}-common = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
@@ -79,7 +84,7 @@ formacie MS RTF i drukowaæ w PostScripcie.
 Summary:	Ted with GTK+-based interface
 Summary(pl):	Ted z interfejsem opartym na GTK+
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description gtk
 Ted with interface based on GTK+ instead of Motif.
@@ -102,7 +107,7 @@ Wspólny pakiet dla obu interfejsów Teda.
 Summary:	Czech spelling dictionary for Ted
 Summary(pl):	Czeski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-cs
 Czech (cs_CZ) spelling dictionary for Ted.
@@ -114,7 +119,7 @@ Czeski (cs_CZ) s³ownik ortograficzny dla Teda.
 Summary:	Danish spelling dictionary for Ted
 Summary(pl):	Duñski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-da
 Danish (da_DK) spelling dictionary for Ted.
@@ -126,7 +131,7 @@ Duñski (da_DK) s³ownik ortograficzny dla Teda.
 Summary:	German spelling dictionary for Ted
 Summary(pl):	Niemiecki s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-de
 German (de_DE) spelling dictionary for Ted.
@@ -138,7 +143,7 @@ Niemiecki (de_DE) s³ownik ortograficzny dla Teda.
 Summary:	English (UK) spelling dictionary for Ted
 Summary(pl):	Angielski (brytyjski) s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-en_GB
 English (UK - en_GB) spelling dictionary for Ted.
@@ -150,7 +155,7 @@ Angielski (brytyjski - en_GB) s³ownik ortograficzny dla Teda.
 Summary:	English (US) spelling dictionary for Ted
 Summary(pl):	Angielski (amerykañski) s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-en_US
 English (en_US) spelling dictionary for Ted.
@@ -162,7 +167,7 @@ Angielski (amerykañski - en_US) s³ownik ortograficzny dla Teda.
 Summary:	Spanish spelling dictionary for Ted
 Summary(pl):	Hiszpañski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-es
 Spanish (es_ES) spelling dictionary for Ted.
@@ -174,7 +179,7 @@ Hiszpañski (es_ES) s³ownik ortograficzny dla Teda.
 Summary:	French spelling dictionary for Ted
 Summary(pl):	Francuski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-fr
 French (fr_FR) spelling dictionary for Ted.
@@ -186,7 +191,7 @@ Francuski (fr_FR) s³ownik ortograficzny dla Teda.
 Summary:	Italian spelling dictionary for Ted
 Summary(pl):	W³oski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-it
 Italian (it_IT) spelling dictionary for Ted.
@@ -198,7 +203,7 @@ W³oski (it_IT) s³ownik ortograficzny dla Teda.
 Summary:	Dutch spelling dictionary for Ted
 Summary(pl):	Holenderski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-nl
 Dutch (nl_NL) spelling dictionary for Ted.
@@ -210,7 +215,7 @@ Holenderski (nl_NL) s³ownik ortograficzny dla Teda.
 Summary:	Norwegian spelling dictionary for Ted
 Summary(pl):	Norweski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-no
 Norwegian (no_NO) spelling dictionary for Ted.
@@ -222,7 +227,7 @@ Norweski (no_NO) s³ownik ortograficzny dla Teda.
 Summary:	Polish spelling dictionary for Ted
 Summary(pl):	Polski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-pl
 Polish (pl_PL) spelling dictionary for Ted.
@@ -234,7 +239,7 @@ Polski (pl_PL) s³ownik ortograficzny dla Teda.
 Summary:	Portuguese spelling dictionary for Ted
 Summary(pl):	Portugalski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-pt
 Portuguese (pt_PT) spelling dictionary for Ted.
@@ -246,7 +251,7 @@ Portugalski (pt_PT) s³ownik ortograficzny dla Teda.
 Summary:	Russian spelling dictionary for Ted
 Summary(pl):	Rosyjski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-ru
 Russian (ru_RU) spelling dictionary for Ted.
@@ -258,7 +263,7 @@ Rosyjski (ru_RU) s³ownik ortograficzny dla Teda.
 Summary:	Slovak spelling dictionary for Ted
 Summary(pl):	S³owacki s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-sk
 Slovak (sk_SK) spelling dictionary for Ted.
@@ -270,7 +275,7 @@ S³owacki (sk_SK) s³ownik ortograficzny dla Teda.
 Summary:	Slovene spelling dictionary for Ted
 Summary(pl):	S³oweñski s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-sl
 Slovene (sl_SI) spelling dictionary for Ted.
@@ -282,7 +287,7 @@ S³oweñski (sl_SI) s³ownik ortograficzny dla Teda.
 Summary:	Swedish spelling dictionary for Ted
 Summary(pl):	Szwedzki s³ownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-sv
 Swedish (sv_SE) spelling dictionary for Ted.
@@ -291,7 +296,7 @@ Swedish (sv_SE) spelling dictionary for Ted.
 Szwedzki (sv_SE) s³ownik ortograficzny dla Teda.
 
 %prep
-%setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20
+%setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21
 %patch0 -p1
 %patch1 -p1
 
@@ -299,7 +304,8 @@ Szwedzki (sv_SE) s³ownik ortograficzny dla Teda.
 for d in bitmap ind libreg appUtil appFrame Ted; do
 	cd $d
 	autoconf
-	%configure --with-MOTIF
+	%configure \
+		--with-MOTIF
 	cd ..
 done
 %{__make} compile.shared
@@ -308,7 +314,8 @@ mv -f Ted/Ted Ted.motif
 for d in appFrame Ted; do
 	cd $d
 	rm -f *.o
-	%configure --with-GTK
+	%configure \
+		--with-GTK
 	cd ..
 done
 %{__make} compile.shared
@@ -338,6 +345,15 @@ for f in cs da de eu fr hu it mg nl no oc pl pt sk ; do
 	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
 		> $RPM_BUILD_ROOT%{_appdefsdir}/${f}/Ted
 done
+# special case
+tar xf Ted_es_AR.ad.tar
+install -d $RPM_BUILD_ROOT%{_appdefsdir}/es_AR
+sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/es_AR/app-defaults/Ted \
+	> $RPM_BUILD_ROOT%{_appdefsdir}/es_AR/Ted
+tar xf Ted_es_ES.ad.tar
+install -d $RPM_BUILD_ROOT%{_appdefsdir}/es
+sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/es_AR/app-defaults/Ted \
+	> $RPM_BUILD_ROOT%{_appdefsdir}/es/Ted
 
 # use latin2 font for pl_PL messages
 echo 'Ted*fontList:	-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2' \
@@ -367,6 +383,8 @@ rm -rf $RPM_BUILD_ROOT
 %lang(cs) %{_appdefsdir}/cs/Ted
 %lang(da) %{_appdefsdir}/da/Ted
 %lang(de) %{_appdefsdir}/de/Ted
+%lang(es) %{_appdefsdir}/es/Ted
+%lang(es_AR) %{_appdefsdir}/es_AR/Ted
 %lang(eu) %{_appdefsdir}/eu/Ted
 %lang(fr) %{_appdefsdir}/fr/Ted
 %lang(hu) %{_appdefsdir}/hu/Ted
