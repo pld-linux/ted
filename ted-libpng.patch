@@ -1,0 +1,20 @@
+--- Ted-2.10/bitmap/bmpng.c.orig	Sun Apr  8 18:05:33 2001
++++ Ted-2.10/bitmap/bmpng.c	Thu Jul 19 09:50:32 2001
+@@ -138,6 +138,8 @@
+     *pBuffer= buffer; return 0;
+     }
+ 
++#undef png_info_init
++
+ int bmReadPngFile(	const char *		filename,
+ 			unsigned char **	pBuffer,
+ 			BitmapDescription *	bd,
+@@ -148,7 +150,7 @@
+     FILE *		f;
+ 
+     png_struct		png;
+-    png_info		pngi;
++    png_infop		pngi;
+ 
+     unsigned char *	buffer;
+ 

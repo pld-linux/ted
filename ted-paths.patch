@@ -1,0 +1,27 @@
+--- Ted-2.10/appFrame/config.h.in.orig	Sun Apr  8 18:05:30 2001
++++ Ted-2.10/appFrame/config.h.in	Thu Jul 19 11:20:14 2001
+@@ -49,11 +49,11 @@
+ #   endif
+ 
+ #   ifndef	AFMDIR
+-#	define	AFMDIR	PKGDIR "/afm"
++#	define	AFMDIR	"/usr/X11R6/share/Ted/afm"
+ #   endif
+ 
+ #   ifndef 	INDDIR
+-#	define	INDDIR	PKGDIR "/ind"
++#	define	INDDIR	"/usr/X11R6/share/Ted/ind"
+ #   endif
+ 
+ /************************************************************************/
+--- Ted-2.10/Ted/config.h.in.orig	Sun Apr  8 18:05:27 2001
++++ Ted-2.10/Ted/config.h.in	Thu Jul 19 11:21:15 2001
+@@ -48,7 +48,7 @@
+ #   endif
+ 
+ #   ifndef	INFODIR
+-#	define	INFODIR	PKGDIR "/info"
++#	define	INFODIR	"/usr/X11R6/share/Ted"
+ #   endif
+ 
+ /************************************************************************/
