@@ -9,26 +9,47 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
+# Source0-md5:	7ed8207cdc925ee7f8b8770ca0af3e52
 Source1:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_cs_CZ.tar.gz
+# Source1-md5:	7942ed59a701c20056fc86b3384fb638
 Source2:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_da_DK.tar.gz
+# Source2-md5:	9ab8e7495e8cbf4e7d5dc57f6007b08a
 Source3:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_de_DE.tar.gz
+# Source3-md5:	c283b5c1c70bec15149ba3ffbf271535
 Source4:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_en_GB.tar.gz
+# Source4-md5:	1c7a8fb09070aedf3c75d99f36632919
 Source5:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_es_ES.tar.gz
+# Source5-md5:	0b64b1251593736f36109ecce7e7dc74
 Source6:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_eu_FR.tar.gz
+# Source6-md5:	3d9a5b5f094e36e35ae9b7e25918cafd
 Source7:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_fr_FR.tar.gz
+# Source7-md5:	a8d2c8029de15a4136d9a155666e5c79
 Source8:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_hu_HU.tar.gz
+# Source8-md5:	12c10b461ca40b3ce0dcf82926c311ed
 Source9:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_it_IT.tar.gz
+# Source9-md5:	f175c23ecdae4f32656a49566af36b42
 Source10:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_mg_MG.tar.gz
+# Source10-md5:	04d34808a6b6613a3773ee9bd3b49c90
 Source11:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_nl_NL.tar.gz
+# Source11-md5:	98e71c2e7ff909417b9e316882bbc73e
 Source12:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_no_NO.tar.gz
+# Source12-md5:	40b35fe137d0618fb1b197ccdcbf0d9f
 Source13:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_oc_FR.tar.gz
+# Source13-md5:	d7a0d3d410dfe73ec48f050eb33c7d0d
 Source14:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pl_PL.tar.gz
+# Source14-md5:	532ce1d54259d2057f0e97a3efaf7866
 Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_BR.tar.gz
+# Source15-md5:	e26bda0ab2219a1235c57b9b74215165
 Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_PT.tar.gz
+# Source16-md5:	c56b9ca9e6b9d8849ced5b2de3872e65
 Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
+# Source17-md5:	6677c6d7ed4d7a511b7cdd02df52dc9c
 Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
+# Source18-md5:	1118b80cd609dc8115f512302a571fd4
 Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
+# Source19-md5:	884c40f7eddab26d6b878521fb55b03d
 Source20:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
+# Source20-md5:	1a61f9dccd1682581c33e8f99a66ba01
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
 URL:		http://www.nllgg.nl/Ted/
