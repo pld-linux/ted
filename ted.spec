@@ -1,8 +1,12 @@
+# NOTE: remember to update i18n resources on each Source0 update!
+#       (tars are not versioned, but updated together with new ted version)
+#
+# TODO: check for new resources in tars (pt_BR for sure), check pl_PL
 Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
 Version:	2.14
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
@@ -20,13 +24,14 @@ Source11:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_nl_NL.tar.gz
 Source12:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_no_NO.tar.gz
 Source13:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_oc_FR.tar.gz
 Source14:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pl_PL.tar.gz
-Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_PT.tar.gz
-Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
-Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
-Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
-Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
-# included in Source14 now, but not updated for 2.13
-Source20:	Ted.ad.pl_PL
+Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_BR.tar.gz
+Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_pt_PT.tar.gz
+Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
+Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
+Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
+Source20:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
+# shouldn't be necessary now, but need to check
+Source21:	Ted.ad.pl_PL
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
 URL:		http://www.nllgg.nl/Ted/
@@ -268,7 +273,7 @@ Swedish (sv_SE) spelling dictionary for Ted.
 Szwedzki (sv_SE) s³ownik ortograficzny dla Teda.
 
 %prep
-%setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19
+%setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20
 %patch0 -p1
 %patch1 -p1
 
@@ -315,7 +320,7 @@ for f in cs da de eu fr hu it mg nl oc pl sk ; do
 		> $RPM_BUILD_ROOT%{addir}/${f}/Ted
 done
 # overwrite pl_PL with updated version
-install %{SOURCE20} $RPM_BUILD_ROOT%{addir}/pl/Ted
+#install %{SOURCE21} $RPM_BUILD_ROOT%{addir}/pl/Ted
 
 %clean
 rm -rf $RPM_BUILD_ROOT
