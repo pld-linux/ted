@@ -1,5 +1,5 @@
---- Ted-2.10/appFrame/config.h.in.orig	Sun Apr  8 18:05:30 2001
-+++ Ted-2.10/appFrame/config.h.in	Thu Jul 19 11:20:14 2001
+--- Ted-2.11/appFrame/appFrameConfig.h.in.orig	Sun Apr  8 18:05:30 2001
++++ Ted-2.11/appFrame/appFrameConfig.h.in	Thu Jul 19 11:20:14 2001
 @@ -49,11 +49,11 @@
  #   endif
  
@@ -14,14 +14,14 @@
  #   endif
  
  /************************************************************************/
---- Ted-2.10/Ted/config.h.in.orig	Sun Apr  8 18:05:27 2001
-+++ Ted-2.10/Ted/config.h.in	Thu Jul 19 11:21:15 2001
+--- Ted-2.11/Ted/tedConfig.h.in.orig	Sun Apr  8 18:05:27 2001
++++ Ted-2.11/Ted/tedConfig.h.in	Thu Jul 19 11:21:15 2001
 @@ -48,7 +48,7 @@
  #   endif
  
- #   ifndef	INFODIR
--#	define	INFODIR	PKGDIR "/info"
-+#	define	INFODIR	"/usr/X11R6/share/Ted"
+ #   ifndef	DOCUMENT_DIR
+-#	define	DOCUMENT_DIR	PKGDIR "/Ted/"
++#	define	DOCUMENT_DIR	"/usr/X11R6/share/Ted/"
  #   endif
  
  /************************************************************************/
