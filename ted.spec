@@ -356,7 +356,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files common
 %defattr(644,root,root,755)
-%doc README 
+%doc README
 %dir %{_datadir}/Ted
 %{_datadir}/Ted/afm
 %dir %{_datadir}/Ted/ind
