@@ -1,12 +1,11 @@
 # NOTE: remember to update i18n resources on each Source0 update!
 #       (tars are not versioned, but updated together with new ted version)
 #
-# TODO: check for new resources in tars (pt_BR for sure), check pl_PL
 Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
 Version:	2.14
-Release:	1.1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
@@ -30,8 +29,6 @@ Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
 Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
 Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
 Source20:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
-# shouldn't be necessary now, but need to check
-Source21:	Ted.ad.pl_PL
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
 URL:		http://www.nllgg.nl/Ted/
@@ -312,15 +309,18 @@ install tedPackage/Ted/TedDocument-en_US.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
 cd Ted
 install TedDocument-*.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
 cd ad
-for f in cs da de eu fr hu it mg nl oc pl sk ; do
+# pt is pt_BR here, but there is no pt_PT translation
+for f in cs da de eu fr hu it mg nl no oc pl pt sk ; do
 	tar xf Ted_${f}_*.tar
 	install -d $RPM_BUILD_ROOT%{addir}/${f}
 	# comment out evil paths
 	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
 		> $RPM_BUILD_ROOT%{addir}/${f}/Ted
 done
-# overwrite pl_PL with updated version
-#install %{SOURCE21} $RPM_BUILD_ROOT%{addir}/pl/Ted
+
+# use latin2 font for pl_PL messages
+echo 'Ted*fontList:	-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2' \
+	>> $RPM_BUILD_ROOT%{addir}/pl/Ted
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -352,8 +352,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %{addir}/it/Ted
 %lang(mg) %{addir}/mg/Ted
 %lang(nl) %{addir}/nl/Ted
+%lang(no) %{addir}/no/Ted
 %lang(oc) %{addir}/oc/Ted
 %lang(pl) %{addir}/pl/Ted
+%lang(pt) %{addir}/pt/Ted
 %lang(sk) %{addir}/sk/Ted
 
 %files spelling-cs
