@@ -5,12 +5,12 @@
  
  #   ifndef	AFMDIR
 -#	define	AFMDIR	PKGDIR "/afm"
-+#	define	AFMDIR	"/usr/X11R6/share/Ted/afm"
++#	define	AFMDIR	"/usr/share/Ted/afm"
  #   endif
  
  #   ifndef 	INDDIR
 -#	define	INDDIR	PKGDIR "/ind"
-+#	define	INDDIR	"/usr/X11R6/share/Ted/ind"
++#	define	INDDIR	"/usr/share/Ted/ind"
  #   endif
  
  /************************************************************************/
@@ -21,7 +21,7 @@
  
  #   ifndef	DOCUMENT_DIR
 -#	define	DOCUMENT_DIR	PKGDIR "/Ted/"
-+#	define	DOCUMENT_DIR	"/usr/X11R6/share/Ted/"
++#	define	DOCUMENT_DIR	"/usr/share/Ted/"
  #   endif
  
  /************************************************************************/

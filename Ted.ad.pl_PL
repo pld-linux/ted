@@ -5,6 +5,8 @@
 !!  @TranslatorStart							!!
 !!  ------------------------------------------------------------------  !!
 !!									!!
+!!  Polish Translation.							!!
+!!									!!
 !!  ------------------------------------------------------------------  !!
 !!  @TranslatorEnd							!!
 !!									!!
@@ -62,6 +64,13 @@
 !!  through X Windows, the $HOME/.Xresources file takes the role of	!!
 !!  the $HOME/.Xdefaults file. For more information try to understand	!!
 !!  the 'xrdb' manual page.						!!
+!!									!!
+!!  The standard X11 command line arguments to override a resource	!!
+!!  value for a single invocation work as well. E.G:			!!
+!!  Ted -xrm Ted.usePostScriptFilters:1					!!
+!!	-xrm Ted.usePostScriptIndexedImages:1 ++printToFile x.rtf y.ps	!!
+!!  uses the special PostScript settings for this invocation only. For	!!
+!!  more information read the X manual page.				!!
 !!									!!
 !!  System wide configuration settings like the default paper size can	!!
 !!  be set in the file /usr/lib/X11/app-defaults/Ted. For exact		!!
@@ -223,18 +232,34 @@ Ted.localeTranslatorEmail:	qboosh@pld.org.pl
 !!  customPrinterName:	The name for the customPrintCommand in the menu	!!
 !!			of the 'Print' dialog.				!!
 !!									!!
-!!  hideSaveToOption:	Some users are confused by the fact that Ted	!!
-!!			has two menu options to save a document. One	!!
-!!			to give it a different name, and one just to	!!
-!!			write the current contents of the document to	!!
-!!			a file. [Possibly in a format like HTML that	!!
-!!			Ted cannot read itself]. To hide the 'Save To'	!!
-!!			menu option set the resource value to 1.	!!
-!!									!!
 !!  supportXvCopyPaste:	Setting this resource enables copy/paste with	!!
 !!			John Bradly's XV program. As the XV copy/paste	!!
 !!			mechanism has its peculiarities, this is off by	!!
 !!			default. To enable set the resource value to 1.	!!
+!!									!!
+!!  usePostScriptFilters: PostScript levels 2 and 3 support the concept	!!
+!!			of filters. Filters make it possible to code	!!
+!!			the images in a PostScript file much more	!!
+!!			efficiently. You can activate this option when	!!
+!!			you have a printer that supports level 2 	!!
+!!			filters and the /FlateDecode filter. Recent	!!
+!!			versions of GhostScript support both. If you	!!
+!!			doubt, just activate the option and see whether	!!
+!!			you can still print images. To activate set the	!!
+!!			value to 1.					!!
+!!									!!
+!!  usePostScriptIndexedImages: PostScript level 2 has a variant of the	!!
+!!			'image' operator that makes it possible to	!!
+!!			include images with a color indirection via a	!!
+!!			palette in the PostScript file. As many if the	!!
+!!			images included in rtf documents are of this	!!
+!!			kind, setting this resource can help you to	!!
+!!			reduce the volume of the PostScript that is	!!
+!!			sent to the printer. All level 2 		!!
+!!			implementaions, including GhostScript support	!!
+!!			indexed images. If you doubt, just activate the	!!
+!!			the option and see whether you can still print	!!
+!!			images. To activate set the value to 1.		!!
 !!									!!
 !!  documentFileName:	The name of the file that contains the online	!!
 !!			document.					!!
@@ -256,6 +281,10 @@ Ted.localeTranslatorEmail:	qboosh@pld.org.pl
 !!			are made. In general it is not desirable to set	!!
 !!			this resource without installing appropriate	!!
 !!			fonts.						!!
+!!			E.G: 1252 for englist speaking countries and	!!
+!!			Western Europe. 1250 for Central Europe and	!!
+!!			1251 for that part of Eastern Europe that uses	!!
+!!			the Cyrillic alphabet.				!!
 !!									!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -292,15 +321,16 @@ Ted.bottomMargin:		25mm
 !Ted.customPrintCommand:	(none)
 !Ted.customPrinterName:		(none)
 
-!Ted.supportXvCopyPaste:	0
-!Ted.hideSaveToOption:	0
+!Ted.supportXvCopyPaste:		0
+!Ted.usePostScriptFilters:		0
+!Ted.usePostScriptIndexedImages:	0
 
 !Ted.documentFileName:		/usr/local/Ted/TedDocument-en_US.rtf
 
 Ted.selectionColor:		LightSteelBlue
 Ted.copiedSelectionColor:	gray70
 
-!Ted.defaultAnsicpg:		(none)
+Ted.defaultAnsicpg:		1250
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!									!!
@@ -551,8 +581,6 @@ Ted.helpMenuText:		Pomoc
 !!  docFileMenuSave.. :		Save this document.			!!
 !!  docFileMenuSaveAs.. :	Save this document with a different	!!
 !!				name.					!!
-!!  docFileMenuSaveTo.. :	Save the contents of this document in	!!
-!!				a file with a different	name.		!!
 !!  docFileMenuPrint.. :	Print this document.			!!
 !!  docFileMenuMail.. :		Mail this document.			!!
 !!  docFileMenuProps.. :	Run document properties dialog		!!
@@ -576,8 +604,6 @@ Ted.docFileMenuSaveKey:		Ctrl <Key>s
 Ted.docFileMenuSaveKeyText:	^S
 
 Ted.docFileMenuSaveAsText:	Zapisz jako...
-
-Ted.docFileMenuSaveToText:	Zapisz do...
 
 Ted.docFileMenuPrintText:	Drukuj...
 Ted.docFileMenuPrintKey:	Ctrl <Key>p
@@ -760,7 +786,14 @@ Ted.docFontMenuPasteText:	Wklej font
 !!  docTableSelectTable.. :	Select the current table.		!!
 !!  docTableSelectRow.. :	Select the current table row.		!!
 !!  docTableSelectColumn.. :	Select the current table column.	!!
-!!  docTableDrawGrid.. :	Toggle the drawing of the table grid.	!!
+!!  docTableDrawGrid.. :	Text of the toggle to turn the drawing	!!
+!!				of the table grid on or off.		!!
+!!									!!
+!!  showTableGrid:		Initial setting of the show table grid 	!!
+!!				toggle. (And of the functionality)	!!
+!!				1 (default): Draw grid.			!!
+!!				0 Do not draw grid.			!!
+!!				Other values are illegal.		!!
 !!									!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -777,6 +810,8 @@ Ted.docTableSelectRowText:	Zaznacz wiersz
 Ted.docTableSelectColumnText:	Zaznacz kolumnê
 
 Ted.docTableDrawGridText:	Wy¶wietlaj siatkê tabeli
+
+Ted.showTableGrid:		1
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!									!!
@@ -821,11 +856,11 @@ Ted.docFormatMenuTopBorderText:		Ramka na górze akapitu
 Ted.docFormatMenuBottomBorderText:	Ramka na dole akapitu
 
 Ted.docFormatMenuOneParaText:		Utwórz jeden akapit
-	
+
 Ted.docFormatMenuLeftAlignedText:	Akapit wyrównany do lewej
 Ted.docFormatMenuRightAlignedText:	Akapit wyrównany do prawej
 Ted.docFormatMenuCenteredText:		Akapit wycentrowany
-	
+
 Ted.docFormatMenuCopyRulText:		Skopiuj prowadnice
 Ted.docFormatMenuPasteRulText:		Wstaw prowadnice
 
@@ -936,6 +971,11 @@ Ted.findToolReplaceNext:	Zast±p i szukaj dalej
 !!  fontToolSubscript:	Label of the toggle button to change the text	!!
 !!			to subscript.					!!
 !!									!!
+!!  fontToolSmallcaps: Label of the toggle button to have the text	!!
+!!			drawn in small capitals.			!!
+!!  fontToolCapitals:	Label of the toggle button to have the text	!!
+!!			drawn in ordinary capitals.			!!
+!!									!!
 !!  fontToolTextColorChooserAutomatic: Text on the text color chooser	!!
 !!			menu for an automatic color.			!!
 !!  fontToolTextColorChooserMoreColors: Text on the text color chooser	!!
@@ -954,6 +994,9 @@ Ted.fontToolTextStrikethrough:			Przekre¶lony
 
 Ted.fontToolSuperscript:			Indeks górny
 Ted.fontToolSubscript:				Indeks dolny
+
+Ted.fontToolSmallcaps:				Zmniejszone wersaliki
+Ted.fontToolCapitals:				Wersaliki
 
 Ted.fontToolRevert:				Przywróæ
 Ted.fontToolSet:				Ustaw
@@ -1199,6 +1242,15 @@ Ted.tableToolChangeSelection:		Zastosuj w dokumencie
 !!  formatToolRowIsTableHeader: Text of the checkbox that determines	!!
 !!			the row is the table header.			!!
 !!									!!
+!!  formatToolRowBorderWidth: (unused) text of the (non existing) label	!!
+!!			of the text box to enter the thickness of the	!!
+!!			borders of a table row.				!!
+!!  formatToolRowBorderStyle: (unused) text of the (non existing) label	!!
+!!			of the menu to select the style of the borders	!!
+!!			of a table row.					!!
+!!  formatToolRowBorderColor: Text of the label of the menu to select	!!
+!!			the color of the borders of a table row.	!!
+!!									!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Ted.tableToolTable:			Tabela
@@ -1211,8 +1263,8 @@ Ted.tableToolLeftIndent:		Lewy margines
 
 
 Ted.tableToolRow:			Wiersz
-Ted.tableToolChangeRow:			Zaztosuj w wierszu
-Ted.tableToolRevert:			Przywróæ
+Ted.tableToolChangeRow:			Zastosuj w wierszu
+!Ted.tableToolRevert:			Przywróæ
 Ted.tableToolNextRow:			Nastêpny wiersz
 Ted.tableToolPreviousRow:		Poprzedni wiersz
 Ted.tableToolSelectRow:			Zaznacz wiersz
@@ -1225,13 +1277,17 @@ Ted.tableToolHeightExactly:		Wysoko¶æ dok³adnie
 Ted.tableToolHeightAtLeast:		Wysoko¶æ minimalnie
 
 Ted.tableToolCellMargin:		Margines komórki
-Ted.tableToolLeftIndent:		Lewy margines
+!Ted.tableToolLeftIndent:		Lewy margines
 
 Ted.tableToolRowTopBorder:		Ramka górna
 Ted.tableToolRowBottomBorder:		Ramka dolna
 
 Ted.formatToolRowKeepOnPage:		Tabela w ca³o¶ci na jednej stronie
 Ted.formatToolRowIsTableHeader:		Jest nag³ówkiem tabeli
+
+Ted.formatToolRowBorderWidth:		Szeroko¶æ
+Ted.formatToolRowBorderStyle:		Styl
+Ted.formatToolRowBorderColor:		Kolor
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!									!!
@@ -1292,7 +1348,7 @@ Ted.formatToolRowIsTableHeader:		Jest nag³ówkiem tabeli
 
 Ted.tableToolColumn:					Kolumna
 Ted.tableToolChangeColumn:				Zastosuj w kolumnie
-Ted.tableToolRevert:					Przywróæ
+!Ted.tableToolRevert:					Przywróæ
 Ted.tableToolNextColumn:				Nastêpna kolumna
 Ted.tableToolPreviousColumn:				Poprzednia kolumna
 Ted.tableToolSelectColumn:				Zaznacz kolumnê
@@ -1320,8 +1376,8 @@ Ted.formatToolColumnBorderColorChooserMoreColors:	Wiêcej kolorów...
 !!  tableToolCell:	Label of the 'Cell' button, to select the	!!
 !!			page with cell properties.			!!
 !!									!!
-!!  Paragraph page:							!!
-!!  ---------------							!!
+!!  Cell page:								!!
+!!  ----------								!!
 !!									!!
 !!  tableToolChangeCell: Text of the button on the 'Cell' page,	to	!!
 !!			apply the properties on that page to the	!!
@@ -1369,6 +1425,11 @@ Ted.formatToolColumnBorderColorChooserMoreColors:	Wiêcej kolorów...
 !!  formatToolCellBorderColorChooserMoreColors: Text on the border	!!
 !!			color chooser menu to get the full rgb color	!!
 !!			chooser.					!!
+!!									!!
+!!  tableToolCellColumnSpan: Label of the text box to enter the number	!!
+!!			of columns that this cell uses.			!!
+!!  tableToolCellRowSpan: Label of the text box to enter the number	!!
+!!			of rows that this cell uses.			!!
 !!									!!
 !!  formatToolCellShading: Title of the frame to change cell shading.	!!
 !!  formatToolCellShadingPattern: Label of the control to change the	!!
@@ -1425,6 +1486,7 @@ Ted.formatToolCellBorderColorChooserAutomatic:		Automatycznie
 Ted.formatToolCellBorderColorChooserMoreColors:		Wiêcej kolorów...
 
 Ted.tableToolCellColumnSpan:		Zajmowane kolumny
+Ted.tableToolCellRowSpan:		Zajmowane wiersze
 
 Ted.formatToolCellShading:		Cieniowanie
 Ted.formatToolCellShadingPattern:	Wzór cienia
@@ -2311,6 +2373,17 @@ Ted.bookmarkCancel:		Anuluj
 !!									!!
 !!  printDialogPlacement:	Title of the frame that allows you to	!!
 !!				place more pages on one sheet of paper.	!!
+!!  printDialogShowPlacementDrawing: Some laptops have microscopic	!!
+!!				screens. Setting this resource to 0	!!
+!!				hides the diagram that shows the	!!
+!!				placement of the document pages on the	!!
+!!				sheets of paper to make the dialog a	!!
+!!				lot smaller to fit on the screen of	!!
+!!				this kind of computer. Permissible	!!
+!!				values:					!!
+!!				1 (default): show diagram.		!!
+!!				0: Do not show diagram.			!!
+!!				All aother values are illegal.		!!
 !!  printDialog_1_UpText:	Print one page of the document per	!!
 !!				sheet of paper. Rotate if necessary	!!
 !!				to make it it fit on the sheet. But do	!!
@@ -2365,36 +2438,50 @@ Ted.bookmarkCancel:		Anuluj
 !!				selected when the Print Dialog is first	!!
 !!				used.					!!
 !!									!!
+!!  printDialogPrinterCount:	The number of printers in the printer	!!
+!!				menu that is shown simultanuously.	!!
+!!  printDialogPrintersUp:	Text of the menu option to move up a	!!
+!!				certain number of printers. %d is	!!
+!!				replaced with the number of printers.	!!
+!!  printDialogPrintersDown:	Text of the menu option to move down a	!!
+!!				certain number of printers. %d is	!!
+!!				replaced with the number of printers.	!!
+!!									!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-Ted.printDialogPrinter:		Drukarka
-Ted.printDialogCancel:		Anuluj
-Ted.printDialogPrint:		Drukuj
-Ted.printDialogPrintToFile:	Drukuj do pliku
-Ted.printDialogFax:		Fax
+Ted.printDialogPrinter:			Drukarka
+Ted.printDialogCancel:			Anuluj
+Ted.printDialogPrint:			Drukuj
+Ted.printDialogPrintToFile:		Drukuj do pliku
+Ted.printDialogFax:			Fax
 
-Ted.printDialogPaperSize:	Rozmiar papieru
-Ted.printDialogCustomPaperSize:	W³asny
+Ted.printDialogPaperSize:		Rozmiar papieru
+Ted.printDialogCustomPaperSize:		W³asny
 
-Ted.printDialogPlacement:	Rozmieszczenie
+Ted.printDialogPlacement:		Rozmieszczenie
+Ted.printDialogShowPlacementDrawing:	1
 
-Ted.printDialog_1_UpText:	1 strona na kartce
-Ted.printDialog_1_ScaledText:	1 strona na kartce dopasowana
-Ted.printDialog_2Row_UpText:	2 strony na kartce pionowo
-Ted.printDialog_2Col_UpText:	2 strony na kartce poziomo
-Ted.printDialog_4H_UpText:	4 strony na kartce poziomo
-Ted.printDialog_4V_UpText:	4 strony na kartce pionowo
+Ted.printDialog_1_UpText:		1 strona na kartce
+Ted.printDialog_1_ScaledText:		1 strona na kartce dopasowana
+Ted.printDialog_2Row_UpText:		2 strony na kartce pionowo
+Ted.printDialog_2Col_UpText:		2 strony na kartce poziomo
+Ted.printDialog_4H_UpText:		4 strony na kartce poziomo
+Ted.printDialog_4V_UpText:		4 strony na kartce pionowo
 
-Ted.printDialogRotate90:	Obrót o 90°
-Ted.printDialogCenterH:		Centrowanie poziome
+Ted.printDialogRotate90:		Obrót o 90°
+Ted.printDialogCenterH:			Centrowanie poziome
 
-Ted.printDialogSelection:	Zakres
-Ted.printDialogAllPages:	Wszystkie strony
-Ted.printDialogPageRange:	Zakres stron
-Ted.printDialogCurrentPage:	Bie¿±ca strona
+Ted.printDialogSelection:		Zakres
+Ted.printDialogAllPages:		Wszystkie strony
+Ted.printDialogPageRange:		Zakres stron
+Ted.printDialogCurrentPage:		Bie¿±ca strona
 
-Ted.printDialogFromPage:	Od
-Ted.printDialogToPage:		Do
+Ted.printDialogFromPage:		Od
+Ted.printDialogToPage:			Do
+
+Ted.printDialogPrinterCount:		15
+Ted.printDialogPrintersUp:		%d w³±czonych
+Ted.printDialogPrintersDown:		%d wy³±czonych
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!									!!
@@ -2554,4 +2641,29 @@ Ted.propDialogCharacters:	Znaki
 
 Ted.propDialogCancel:		Anuluj
 Ted.propDialogOk:		OK
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!									!!
+!!  The following resource settings make Ted more like a real Silicon	!!
+!!  Graphics application on SGI IRIX.					!!
+!!									!!
+!!  As this is an example resource file for all platforms, the settings	!!
+!!  are commented out.							!!
+!!									!!
+!!  Thanks Avi Bercovich and Max Matveev for telling so.		!!
+!!									!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!Ted*sgiMode: True
+!Ted*useSchemes: Colors
+!Ted*XmCascadeButton*fontList: -*-helvetica-bold-o-normal-*-14-*-*-*-*-*-*-*
+!Ted*popup_*fontList: -*-helvetica-bold-o-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmLabel*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmList*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmPushButton*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmToggleButton*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmTextField*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmLabelGadget*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmPushButtonGadget*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
+!Ted*XmForm*XmText*fontList: -*-helvetica-medium-r-normal-*-14-*-*-*-*-*-*-*
 

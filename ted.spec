@@ -2,7 +2,7 @@ Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
 Version:	2.13
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
@@ -25,7 +25,7 @@ Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
 Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
 Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
 Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
-# included in Source14 now, but need to check if doesn't need update
+# included in Source14 now, but not updated for 2.13
 Source20:	Ted.ad.pl_PL
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
@@ -40,6 +40,7 @@ BuildRequires:	motif-devel
 Requires:	%{name}-common = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		addir	/usr/X11R6/lib/X11/app-defaults
 
 %description
 Ted is a text processor running under X Window on Unix/Linux systems.
@@ -306,15 +307,15 @@ install tedPackage/Ted/TedDocument-en_US.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
 cd Ted
 install TedDocument-*.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
 cd ad
-for f in cs da de eu fr hu it mg nl oc sk ; do
+for f in cs da de eu fr hu it mg nl oc pl sk ; do
 	tar xf Ted_${f}_*.tar
-	install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}
+	install -d $RPM_BUILD_ROOT%{addir}/${f}
 	# comment out evil paths
 	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
-		> $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}/Ted
+		> $RPM_BUILD_ROOT%{addir}/${f}/Ted
 done
-install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl
-install %{SOURCE20} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Ted
+# overwrite pl_PL with updated version
+install %{SOURCE20} $RPM_BUILD_ROOT%{addir}/pl/Ted
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -337,18 +338,18 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/Ted/TedDocument-en_US.rtf
 %lang(fr) %{_datadir}/Ted/TedDocument-fr_FR.rtf
 %lang(mg) %{_datadir}/Ted/TedDocument-mg_MG.rtf
-%lang(cs) %{_libdir}/X11/app-defaults/cs/Ted
-%lang(da) %{_libdir}/X11/app-defaults/da/Ted
-%lang(de) %{_libdir}/X11/app-defaults/de/Ted
-%lang(eu) %{_libdir}/X11/app-defaults/eu/Ted
-%lang(fr) %{_libdir}/X11/app-defaults/fr/Ted
-%lang(hu) %{_libdir}/X11/app-defaults/hu/Ted
-%lang(it) %{_libdir}/X11/app-defaults/it/Ted
-%lang(mg) %{_libdir}/X11/app-defaults/mg/Ted
-%lang(nl) %{_libdir}/X11/app-defaults/nl/Ted
-%lang(oc) %{_libdir}/X11/app-defaults/oc/Ted
-%lang(pl) %{_libdir}/X11/app-defaults/pl/Ted
-%lang(sk) %{_libdir}/X11/app-defaults/sk/Ted
+%lang(cs) %{addir}/cs/Ted
+%lang(da) %{addir}/da/Ted
+%lang(de) %{addir}/de/Ted
+%lang(eu) %{addir}/eu/Ted
+%lang(fr) %{addir}/fr/Ted
+%lang(hu) %{addir}/hu/Ted
+%lang(it) %{addir}/it/Ted
+%lang(mg) %{addir}/mg/Ted
+%lang(nl) %{addir}/nl/Ted
+%lang(oc) %{addir}/oc/Ted
+%lang(pl) %{addir}/pl/Ted
+%lang(sk) %{addir}/sk/Ted
 
 %files spelling-cs
 %defattr(644,root,root,755)
