@@ -60,7 +60,7 @@ Patch1:		%{name}-gtklocale.patch
 URL:		http://www.nllgg.nl/Ted/
 BuildRequires:	XFree86-devel >= 4.0
 BuildRequires:	autoconf
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	libpng-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
