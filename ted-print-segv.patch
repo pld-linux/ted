@@ -1,0 +1,11 @@
+--- Ted-2.10/appUtil/appPrinter.c.orig	Sun Apr  8 18:05:32 2001
++++ Ted-2.10/appUtil/appPrinter.c	Thu Jul 19 14:33:24 2001
+@@ -135,7 +135,7 @@
+ 				(count+ 1)*sizeof( PrintDestination ) );
+ 	if  ( ! fresh )
+ 	    { XDEB(fresh); return -1;	}
+-	pd= fresh;
++	*pDestinations= pd= fresh;
+ 
+ 	fresh += count;
+ 
