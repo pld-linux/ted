@@ -1,7 +1,7 @@
 Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
-Version:	2.11
+Version:	2.12
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
@@ -296,7 +296,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README tedPackage/rdm.txt
+%doc README 
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/Ted
 %{_datadir}/Ted/afm
