@@ -291,14 +291,12 @@ cd ../..
 install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl
 install %{SOURCE17} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Ted
 
-gzip -9nf README tedPackage/rdm.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz tedPackage/rdm.txt.gz
+%doc README tedPackage/rdm.txt
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/Ted
 %{_datadir}/Ted/afm
