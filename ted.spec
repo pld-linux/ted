@@ -25,6 +25,7 @@ Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
 Source17:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
 Source18:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
 Source19:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
+# included in Source14 now, but need to check if doesn't need update
 Source20:	Ted.ad.pl_PL
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
