@@ -1,66 +1,81 @@
-Summary:	An easy Rich Text Processor
-Summary(pl):	£atwy w obs³udze procesor RTF
+Summary:	Ted - easy rich text processor
+Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
 Version:	2.10
 Release:	1
 License:	GPL
-Group:		X11/Applications
-Source0:	ftp://ftp.nluug.nl/pub/editors/ted/%{name}-%{version}.src.tar.gz
-Source1:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_en_GB.tar.gz
-Source2:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pl_PL.tar.gz
-Patch0:		ftp://ftp.debian.org/debian/pool/main/t/ted/%{name}_2.10-3.diff.gz
+Group:		X11/Applications/Editors
+Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
+Patch0:		%{name}-libpng.patch
+Patch1:		%{name}-paths.patch
+Patch2:		%{name}-print-segv.patch
 URL:		http://www.nllgg.nl/Ted/
-BuildRequires:	motif-devel
+BuildRequires:	autoconf
+BuildRequires:	XFree86-devel >= 4.0
+BuildRequires:	libpng-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libpng-devel
-BuildRequires:	XFree86-devel
+BuildRequires:	motif-devel
+#BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-%define		_sysconfdir	/etc/X11
 
 %description
-Ted is an easy rich text processor. It can edit RTF files in a wysiwyg
-manner. It supports multiple fonts and can print to PostScript
-printers.
-
-Ted consists of a general part: The program, something.afm files and
-an American spelling checker. Additional packages with spell checking
-dictionaries for different languages exist.
+Ted is a text processor running under X Window on Unix/Linux systems.
+It was made to edit rich text documents on Unix/Linux in a WYSIWYG
+way. It can edit MS RTF files and print to PostScript.
 
 %description -l pl
-Ten jest ³atwym procesorem tekstu (RTF). Mo¿e on edytowaæ pliki RTF w
-sposób wysiwyg. Wspiera wiele fontów oraz mo¿e drukowaæ na drukarkach
-PostScriptowych.
+Ted jest procesorem tekstu dzia³aj±cym pod X Window pod unices. S³u¿y
+do edycji dokumentów tekstowych w stylu WYSIWYG. Mo¿e obrabiaæ pliki w
+formacie MS RTF i drukowaæ w PostScripcie.
 
 %prep
-%setup -q -n Ted-%{version} -a1 -a2
+%setup -q -n Ted-%{version}
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
-CC="%{__cc}"; export CC
-CFLAGS="%{rpmcflags}"; export CFLAGS
+for d in bitmap ind libreg appUtil appFrame Ted; do
+	cd $d
+	autoconf
+	%configure --with-MOTIF
+	cd ..
+done
+%{__make} compile.shared
+##mv -f Ted/Ted Ted.motif
 
-%{__make} \
-	CONFIGURE_OPTIONS="--prefix=%{_prefix} --with-MOTIF" \
-	compile.shared
+# gtk part commented out - gtk port is not complete!
+##for d in appFrame Ted; do
+##	cd $d
+##	rm -f *.o
+##	%%configure --with-GTK
+##	cd ..
+##done
+##%{__make} compile.shared
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_libdir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/Ted/{afm,ind}}
 
-install Ted/Ted $RPM_BUILD_ROOT%{_bindir}/%{name}
-install ind/*.ind $RPM_BUILD_ROOT%{_libdir}/%{name}
+(cd tedPackage ; tar xf TedBindist.tar)
 
-gzip -9nf README
+##install Ted.motif $RPM_BUILD_ROOT%{_bindir}
+##install Ted/Ted $RPM_BUILD_ROOT%{_bindir}/Ted.gtk
+install Ted/Ted $RPM_BUILD_ROOT%{_bindir}
+install tedPackage/afm/* $RPM_BUILD_ROOT%{_datadir}/Ted/afm
+install tedPackage/ind/* $RPM_BUILD_ROOT%{_datadir}/Ted/ind
+install tedPackage/info/TedDocument.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
+
+gzip -9nf README tedPackage/rdm.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README.gz tedPackage/rdm.txt.gz
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/%{name}
+%{_datadir}/Ted
