@@ -22,6 +22,7 @@ Source13:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_ru_RU.tar.gz
 Source14:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sk_SK.tar.gz
 Source15:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sl_SI.tar.gz
 Source16:	ftp://ftp.nluug.nl/pub/editors/%{name}/Ted_sv_SE.tar.gz
+Source17:	Ted.ad.pl_PL
 Patch0:		%{name}-paths.patch
 URL:		http://www.nllgg.nl/Ted/
 BuildRequires:	autoconf
@@ -279,10 +280,13 @@ cd Ted/ad
 for f in cs da de fr hu it nl sk ; do
 	tar xf Ted_${f}_*.tar
 	install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}
-	install usr/lib/X11/${f}_*/app-defaults/Ted \
-		$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}/Ted
+	# comment out evil paths
+	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
+		> $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/${f}/Ted
 done
 cd ../..
+install -d $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl
+install %{SOURCE17} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Ted
 
 gzip -9nf README tedPackage/rdm.txt
 
@@ -304,6 +308,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(hu) %{_libdir}/X11/app-defaults/hu/Ted
 %lang(it) %{_libdir}/X11/app-defaults/it/Ted
 %lang(nl) %{_libdir}/X11/app-defaults/nl/Ted
+%lang(pl) %{_libdir}/X11/app-defaults/pl/Ted
 %lang(sk) %{_libdir}/X11/app-defaults/sk/Ted
 
 %files spelling-cs
