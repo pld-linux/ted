@@ -5,9 +5,6 @@ Version:	2.10
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
-Group(de):	X11/Applikationen/Editors
-Group(pl):	X11/Aplikacje/Edytory
-Group(pt):	X11/Aplicações/Editores
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
 Patch0:		%{name}-libpng.patch
 Patch1:		%{name}-paths.patch
