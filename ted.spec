@@ -373,7 +373,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %{_appdefsdir}/it/Ted
 %lang(mg) %{_appdefsdir}/mg/Ted
 %lang(nl) %{_appdefsdir}/nl/Ted
-%lang(no) %{_appdefsdir}/no/Ted
+%lang(nb) %{_appdefsdir}/no/Ted
 %lang(oc) %{_appdefsdir}/oc/Ted
 %lang(pl) %{_appdefsdir}/pl/Ted
 %lang(pt) %{_appdefsdir}/pt/Ted
