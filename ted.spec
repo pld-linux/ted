@@ -1,8 +1,8 @@
 Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
-Version:	2.12
-Release:	2
+Version:	2.13
+Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/%{name}/%{name}-%{version}.src.tar.gz
