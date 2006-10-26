@@ -14,7 +14,7 @@
      const int			xdefl= sizeof( xdefs )- 1;
  
 -    static const char		xlibs[]= "/usr/lib/X11";
-+    static const char		xlibs[]= "/usr/X11R6/lib/X11";
++    static const char		xlibs[]= "/usr/share/X11";
      const int			xlibl= sizeof( xlibs )- 1;
  
      static const char		adefs[]= "app-defaults";
@@ -32,15 +32,15 @@
 +		*strchr( lang, '@' ) = 0;
  	    sprintf( name, "%s/%s/%s/%s",
  				xlibs,
-+				adefs,
  				lang,
++				adefs,
 +				ea->eaApplicationName );
 +	    if  ( access( name, R_OK ) && strchr( lang, '_' )) {
 +		*strchr( lang, '_' ) = 0;
 +		sprintf( name, "%s/%s/%s/%s",
 +				xlibs,
- 				adefs,
 +				lang,
+ 				adefs,
  				ea->eaApplicationName );
 -
 +	    }
