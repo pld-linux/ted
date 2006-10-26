@@ -1,0 +1,603 @@
+--- Ted-2.17/Ted/ad/usr/lib/X11/pl_PL/app-defaults/Ted.orig	2004-11-21 14:01:18.000000000 +0100
++++ Ted-2.17/Ted/ad/usr/lib/X11/pl_PL/app-defaults/Ted	2006-10-26 19:02:20.453395000 +0200
+@@ -432,7 +432,7 @@
+ Ted*dirListLabelString:		Katalogi
+ Ted*fileListLabelString:	Pliki
+ Ted*selectionLabelString:	Wybór
+-!== Ted*okLabelString:		OK
++Ted*okLabelString:		OK
+ Ted*applyLabelString:		Filruj
+ Ted*cancelLabelString:		Anuluj
+ 
+@@ -543,30 +543,30 @@
+ Ted.helpMenuText:		Pomoc
+ 
+ Ted.appFileMenuNewText:		Nowy
+-!== Ted.appFileMenuNewKey:		Ctrl <Key>n
+-!== Ted.appFileMenuNewKeyText:	^N
++Ted.appFileMenuNewKey:		Ctrl <Key>n
++Ted.appFileMenuNewKeyText:	^N
+ 
+ Ted.appFileMenuOpenText:	Otwórz
+-!== Ted.appFileMenuOpenKey:		Ctrl <Key>o
+-!== Ted.appFileMenuOpenKeyText:	^O
++Ted.appFileMenuOpenKey:		Ctrl <Key>o
++Ted.appFileMenuOpenKeyText:	^O
+ 
+ Ted.appFileMenuMiniText:	Minimalizuj
+-!== Ted.appFileMenuMiniKey:		Ctrl <Key>m
+-!== Ted.appFileMenuMiniKeyText:	^M
++Ted.appFileMenuMiniKey:		Ctrl <Key>m
++Ted.appFileMenuMiniKeyText:	^M
+ 
+ Ted.appFileMenuHideText:	Ukryj
+-!== Ted.appFileMenuHideKey:		Ctrl <Key>h
+-!== Ted.appFileMenuHideKeyText:	^H
++Ted.appFileMenuHideKey:		Ctrl <Key>h
++Ted.appFileMenuHideKeyText:	^H
+ 
+ Ted.appFileMenuQuitText:	Koniec
+ 
+ Ted.appWinMenuMiniText:		Minimalizuj
+-!== Ted.appWinMenuMiniKey:		Ctrl <Key>m
+-!== Ted.appWinMenuMiniKeyText:	^M
++Ted.appWinMenuMiniKey:		Ctrl <Key>m
++Ted.appWinMenuMiniKeyText:	^M
+ 
+ Ted.appWinMenuHideText:		Ukryj
+-!== Ted.appWinMenuHideKey:		Ctrl <Key>h
+-!== Ted.appWinMenuHideKeyText:	^H
++Ted.appWinMenuHideKey:		Ctrl <Key>h
++Ted.appWinMenuHideKeyText:	^H
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -607,12 +607,12 @@
+ Ted.docFileMenuText:		Plik
+ Ted.docEditMenuText:		Edycja
+ Ted.docInsertMenuText:		Wstaw
+-!== Ted.docFontMenuText:		Font
+-!== Ted.docFormatMenuText:		Format
++Ted.docFontMenuText:		Font
++Ted.docFormatMenuText:		Format
+ Ted.docTableMenuText:		Tabele
+ Ted.docToolsMenuText:		Narzêdzia
+ Ted.docWinMenuText:		Okna
+-!Ted.helpMenuText:		Help
++!Ted.helpMenuText:		Pomoc
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -634,34 +634,34 @@
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ Ted.docFileMenuNewText:		Nowy
+-!== Ted.docFileMenuNewKey:		Ctrl <Key>n
+-!== Ted.docFileMenuNewKeyText:	^N
++Ted.docFileMenuNewKey:		Ctrl <Key>n
++Ted.docFileMenuNewKeyText:	^N
+ 
+ Ted.docFileMenuOpenText:	Otwórz
+-!== Ted.docFileMenuOpenKey:		Ctrl <Key>o
+-!== Ted.docFileMenuOpenKeyText:	^O
++Ted.docFileMenuOpenKey:		Ctrl <Key>o
++Ted.docFileMenuOpenKeyText:	^O
+ 
+ Ted.docFileMenuSaveText:	Zapisz
+-!== Ted.docFileMenuSaveKey:		Ctrl <Key>s
+-!== Ted.docFileMenuSaveKeyText:	^S
++Ted.docFileMenuSaveKey:		Ctrl <Key>s
++Ted.docFileMenuSaveKeyText:	^S
+ 
+ Ted.docFileMenuSaveAsText:	Zapisz jako...
+ 
+ Ted.docFileMenuPrintText:	Drukuj...
+-!== Ted.docFileMenuPrintKey:	Ctrl <Key>p
+-!== Ted.docFileMenuPrintKeyText:	^P
++Ted.docFileMenuPrintKey:	Ctrl <Key>p
++Ted.docFileMenuPrintKeyText:	^P
+ 
+ Ted.docFileMenuMailText:	Wy¶lij...
+ 
+ Ted.docFileMenuPropsText:	W³a¶ciwo¶ci...
+ 
+ Ted.docFileMenuMiniText:	Minimalizuj
+-!== Ted.docFileMenuMiniKey:		Ctrl <Key>m
+-!== Ted.docFileMenuMiniKeyText:	^M
++Ted.docFileMenuMiniKey:		Ctrl <Key>m
++Ted.docFileMenuMiniKeyText:	^M
+ 
+ Ted.docFileMenuHideText:	Ukryj
+-!== Ted.docFileMenuHideKey:		Ctrl <Key>h
+-!== Ted.docFileMenuHideKeyText:	^H
++Ted.docFileMenuHideKey:		Ctrl <Key>h
++Ted.docFileMenuHideKeyText:	^H
+ 
+ Ted.docFileMenuCloseText:	Zamknij
+ 
+@@ -682,20 +682,20 @@
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ Ted.docEditMenuCopyText:		Kopiuj
+-!== Ted.docEditMenuCopyKey:			Ctrl <Key>c
+-!== Ted.docEditMenuCopyKeyText:		^C
++Ted.docEditMenuCopyKey:			Ctrl <Key>c
++Ted.docEditMenuCopyKeyText:		^C
+ 
+ Ted.docEditMenuCutText:			Wytnij
+-!== Ted.docEditMenuCutKey:			Ctrl <Key>x
+-!== Ted.docEditMenuCutKeyText:		^X
++Ted.docEditMenuCutKey:			Ctrl <Key>x
++Ted.docEditMenuCutKeyText:		^X
+ 
+ Ted.docEditMenuPasteText:		Wklej
+-!== Ted.docEditMenuPasteKey:		Ctrl <Key>v
+-!== Ted.docEditMenuPasteKeyText:		^V
++Ted.docEditMenuPasteKey:		Ctrl <Key>v
++Ted.docEditMenuPasteKeyText:		^V
+ 
+ Ted.docEditMenuSelAllText:		Zaznacz wszystko
+-!== Ted.docEditMenuSelAllKey:		Ctrl <Key>a
+-!== Ted.docEditMenuSelAllKeyText:		^A
++Ted.docEditMenuSelAllKey:		Ctrl <Key>a
++Ted.docEditMenuSelAllKeyText:		^A
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -726,11 +726,11 @@
+ 
+ Ted.docInsertMenuInsPictText:		Obrazek...
+ 
+-!== Ted.docInsertMenuInsertSymbolText:	Symbol
++Ted.docInsertMenuInsertSymbolText:	Symbol
+ 
+ Ted.docInsertMenuHyperlinkText:		Odno¶nik
+-!== Ted.docInsertMenuHyperlinkKey:		Ctrl <Key>k
+-!== Ted.docInsertMenuHyperlinkKeyText:	^K
++Ted.docInsertMenuHyperlinkKey:		Ctrl <Key>k
++Ted.docInsertMenuHyperlinkKeyText:	^K
+ 
+ Ted.docInsertMenuBookmarkText:		Zak³adkê...
+ 
+@@ -764,12 +764,12 @@
+ 
+ Ted.docWinMenuAboutText:	O programie Ted
+ Ted.docWinMenuMiniText:		Minimalizuj
+-!== Ted.docWinMenuMiniKey:		Ctrl <Key>m
+-!== Ted.docWinMenuMiniKeyText:	^M
++Ted.docWinMenuMiniKey:		Ctrl <Key>m
++Ted.docWinMenuMiniKeyText:	^M
+ 
+ Ted.docWinMenuHideText:		Ukryj
+-!== Ted.docWinMenuHideKey:		Ctrl <Key>h
+-!== Ted.docWinMenuHideKeyText:	^H
++Ted.docWinMenuHideKey:		Ctrl <Key>h
++Ted.docWinMenuHideKeyText:	^H
+ 
+ Ted.docWinMenuCloseText:	Zamknij
+ 
+@@ -796,16 +796,16 @@
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ Ted.docFontMenuBoldText:	Pogrubienie
+-!== Ted.docFontMenuBoldKey:		Ctrl <Key>b
+-!== Ted.docFontMenuBoldKeyText:	^B
++Ted.docFontMenuBoldKey:		Ctrl <Key>b
++Ted.docFontMenuBoldKeyText:	^B
+ 
+ Ted.docFontMenuItalicText:	Kursywa
+-!== Ted.docFontMenuItalicKey:	Ctrl <Key>i
+-!== Ted.docFontMenuItalicKeyText:	^I
++Ted.docFontMenuItalicKey:	Ctrl <Key>i
++Ted.docFontMenuItalicKeyText:	^I
+ 
+ Ted.docFontMenuUnderlText:	Podkre¶lenie
+-!== Ted.docFontMenuUnderlKey:	Ctrl <Key>u
+-!== Ted.docFontMenuUnderlKeyText:	^U
++Ted.docFontMenuUnderlKey:	Ctrl <Key>u
++Ted.docFontMenuUnderlKeyText:	^U
+ 
+ Ted.docFontMenuSuperscriptText:	Indeks górny
+ Ted.docFontMenuSubscriptText:	Indeks dolny
+@@ -856,15 +856,15 @@
+ 
+ Ted.docTableSelectColumnText:	Zaznacz kolumnê
+ 
+-!== Ted.docTableDeleteTableText:	Delete Table
++Ted.docTableDeleteTableText:	Usuñ tabelê
+ 
+-!== Ted.docTableDeleteRowText:	Delete Row
++Ted.docTableDeleteRowText:	Usuñ wiersz
+ 
+-!== Ted.docTableDeleteColumnText:	Delete Column
++Ted.docTableDeleteColumnText:	Usuñ kolumnê
+ 
+ Ted.docTableDrawGridText:	Wy¶wietlaj siatkê tabeli
+ 
+-!== Ted.showTableGrid:		1
++Ted.showTableGrid:		1
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -922,8 +922,8 @@
+ Ted.docFormatMenuCopyRulText:		Skopiuj prowadnice
+ Ted.docFormatMenuPasteRulText:		Wstaw prowadnice
+ 
+-!== Ted.docFormatMenuIncreaseIndentText:	Increase Indent
+-!== Ted.docFormatMenuDecreaseIndentText:	Decrease Indent
++Ted.docFormatMenuIncreaseIndentText:	Zwiêksz wciêcie
++Ted.docFormatMenuDecreaseIndentText:	Zmniejsz wciêcie
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -948,16 +948,16 @@
+ Ted.docToolMenuFontText:		Przegl±darka fontów
+ 
+ Ted.docToolMenuFindText:		Szukaj
+-!== Ted.docToolMenuFindKey:			Ctrl <Key>f
+-!== Ted.docToolMenuFindKeyText:		^F
++Ted.docToolMenuFindKey:			Ctrl <Key>f
++Ted.docToolMenuFindKeyText:		^F
+ 
+ Ted.docToolMenuFindNextText:		Szukaj
+-!== Ted.docToolMenuFindNextKey:		<Key>F3
+-!== Ted.docToolMenuFindNextKeyText:		F3
++Ted.docToolMenuFindNextKey:		<Key>F3
++Ted.docToolMenuFindNextKeyText:		F3
+ 
+ Ted.docToolMenuSpellText:		Kontrola pisowni
+-!== Ted.docToolMenuSpellKey:		<Key>F7
+-!== Ted.docToolMenuSpellKeyText:		F7
++Ted.docToolMenuSpellKey:		<Key>F7
++Ted.docToolMenuSpellKeyText:		F7
+ 
+ Ted.docToolMenuPageLayoutText:		Uk³ad strony
+ 
+@@ -1015,8 +1015,8 @@
+ Ted.findToolReplaceFound:	Zast±p
+ Ted.findToolReplaceNext:	Zast±p i szukaj dalej
+ 
+-!== Ted.findToolLower:		Lower
+-!== Ted.findToolClose:		Close
++Ted.findToolLower:		Obni¿
++Ted.findToolClose:		Zamknij
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -1079,8 +1079,8 @@
+ !!									!!
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+-!== Ted.fontToolFont:				Font
+-!== Ted.fontToolListFont:				List Font
++Ted.fontToolFont:				Font
++Ted.fontToolListFont:				Font listy
+ 
+ Ted.fontToolFamily:				Rodzina
+ Ted.fontToolFace:				Czcionka
+@@ -1105,8 +1105,8 @@
+ Ted.fontToolRevert:				Przywróæ
+ Ted.fontToolSet:				Ustaw
+ 
+-!== Ted.fontToolRevertListFont:			Revert
+-!== Ted.fontToolSetListFont:			Set
++Ted.fontToolRevertListFont:			Przywróæ
++Ted.fontToolSetListFont:			Ustaw
+ 
+ Ted.fontToolTextColorChooserAutomatic:		Automatycznie
+ Ted.fontToolTextColorChooserMoreColors:		Wiêcej kolorów...
+@@ -1124,11 +1124,11 @@
+ !!									!!
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+-!== Ted.symbolPickerFont:		Font
++Ted.symbolPickerFont:		Font
+ Ted.symbolPickerNone:		Brak
+ Ted.symbolPickerInsert:		Wstaw
+-!== Ted.symbolPickerLower:		Lower
+-!== Ted.symbolPickerClose:		Close
++Ted.symbolPickerLower:		Obni¿
++Ted.symbolPickerClose:		Zamknij
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -1186,8 +1186,8 @@
+ Ted.spellToolCorrect:		Popraw
+ Ted.spellToolNoDicts:		Brak
+ 
+-!== Ted.spellToolLower:		Lower
+-!== Ted.spellToolClose:		Close
++Ted.spellToolLower:		Obni¿
++Ted.spellToolClose:		Zamknij
+ 
+ !== Ted.spellToolPrivateDicts:	.Dictionaries
+ !== Ted.spellToolSystemDicts:	/usr/local/ind
+@@ -1390,7 +1390,7 @@
+ 
+ Ted.tableToolRow:			Wiersz
+ Ted.tableToolChangeRow:			Zastosuj w wierszu
+-!Ted.tableToolRevert:			Revert
++!Ted.tableToolRevert:			Przywróæ
+ Ted.tableToolNextRow:			Nastêpny wiersz
+ Ted.tableToolPreviousRow:		Poprzedni wiersz
+ Ted.tableToolSelectRow:			Zaznacz wiersz
+@@ -1403,7 +1403,7 @@
+ Ted.tableToolHeightAtLeast:		Wysoko¶æ minimalnie
+ 
+ Ted.tableToolCellMargin:		Margines komórki
+-!Ted.tableToolLeftIndent:		Left Margin
++!Ted.tableToolLeftIndent:		Lewy margines
+ 
+ Ted.tableToolRowTopBorder:		Ramka górna
+ Ted.tableToolRowBottomBorder:		Ramka dolna
+@@ -1477,7 +1477,7 @@
+ 
+ Ted.tableToolColumn:					Kolumna
+ Ted.tableToolChangeColumn:				Zastosuj w kolumnie
+-!Ted.tableToolRevert:					Revert
++!Ted.tableToolRevert:					Przywróæ
+ Ted.tableToolNextColumn:				Nastêpna kolumna
+ Ted.tableToolPreviousColumn:				Poprzednia kolumna
+ Ted.tableToolSelectColumn:				Zaznacz kolumnê
+@@ -1592,7 +1592,7 @@
+ Ted.tableToolCell:			Komórka
+ 
+ Ted.tableToolChangeCell:		Zastosuj w komórce
+-!Ted.tableToolRevert:			Revert
++!Ted.tableToolRevert:			Przywróæ
+ 
+ Ted.tableToolCellNextColumn:		Nastêpna kolumna
+ Ted.tableToolCellPreviousColumn:	Poprzednia kolumna
+@@ -1724,7 +1724,7 @@
+ Ted.formatToolParaLayout:		Formatowanie akapitu
+ 
+ Ted.formatToolChangePara:		Zastosuj w akapicie
+-!Ted.tableToolRevert:			Revert
++!Ted.tableToolRevert:			Przywróæ
+ Ted.formatToolNextPara:			Nastêpny akapit
+ Ted.formatToolPreviousPara:		Poprzedni akapit
+ Ted.formatToolSelectPara:		Zaznacz akapit
+@@ -1857,19 +1857,19 @@
+ 
+ Ted.formatToolParaOrnaments:		Ramki i cieniowanie akapitu
+ 
+-!Ted.formatToolChangePara:		Apply to Paragraph
+-!Ted.tableToolRevert:			Revert
+-!Ted.formatToolNextPara:		Next Paragraph
+-!Ted.formatToolPreviousPara:		Previous Paragraph
+-!Ted.formatToolSelectPara:		Select Paragraph
+-!Ted.formatToolDeletePara:		Delete Paragraph
+-!Ted.formatToolInsertPara:		Insert Paragraph
+-!Ted.formatToolAppendPara:		Append Paragraph
++!Ted.formatToolChangePara:		Zastosuj w akapicie
++!Ted.tableToolRevert:			Przywróæ
++!Ted.formatToolNextPara:		Nastepny akapit
++!Ted.formatToolPreviousPara:		Poprzedni akapit
++!Ted.formatToolSelectPara:		Zaznacz akapit
++!Ted.formatToolDeletePara:		Usuñ akapit
++!Ted.formatToolInsertPara:		Wstaw akapit
++!Ted.formatToolAppendPara:		Dodaj akapit
+ 
+ Ted.formatToolParaTopBorder:		Ramka górna
+ Ted.formatToolParaBottomBorder:		Ramka dolna
+-!== Ted.formatToolParaLeftBorder:		Left Border
+-!== Ted.formatToolParaRightBorder:		Right Border
++Ted.formatToolParaLeftBorder:		Ramka lewa
++Ted.formatToolParaRightBorder:		Ramka prawa
+ 
+ Ted.formatToolParaBorderWidth:		Szeroko¶æ
+ Ted.formatToolParaBorderStyle:		Styl
+@@ -1997,19 +1997,19 @@
+ Ted.listToolListLevelStartAt:		Pierwszy numer
+ Ted.listToolListLevelNoRestart:		Ci±g³a
+ 
+-!== Ted.listToolLevelNumberFormat:		Format
++Ted.listToolLevelNumberFormat:		Format
+ 
+-!== Ted.listToolDeleteLevelNumber:		Delete
+-!== Ted.listToolInsertLevelNumber:		Insert
+-!== Ted.listToolEditLevelText:		Edit
++Ted.listToolDeleteLevelNumber:		Usuñ
++Ted.listToolInsertLevelNumber:		Wstaw
++Ted.listToolEditLevelText:		Modyfikuj
+ 
+ Ted.listToolLevelNumberStyle:		Styl
+-!== Ted.listToolListLevelStyleNar:		1, 2, 3
+-!== Ted.listToolListLevelStyleNruc:		I, II, III
+-!== Ted.listToolListLevelStyleNrlc:		i, ii, iii
+-!== Ted.listToolListLevelStyleNauc:		A, B, C
+-!== Ted.listToolListLevelStyleNalc:		a, b, c
+-!== Ted.listToolListLevelStyleNar0:		01, 02, 10, 11
++Ted.listToolListLevelStyleNar:		1, 2, 3
++Ted.listToolListLevelStyleNruc:		I, II, III
++Ted.listToolListLevelStyleNrlc:		i, ii, iii
++Ted.listToolListLevelStyleNauc:		A, B, C
++Ted.listToolListLevelStyleNalc:		a, b, c
++Ted.listToolListLevelStyleNar0:		01, 02, 10, 11
+ Ted.listToolListLevelStyleBullet:	Okr±g³e
+ Ted.listToolListLevelStyleNone:		Brak
+ 
+@@ -2018,7 +2018,7 @@
+ Ted.listToolListLevelJustifyCentered:	Centrowanie
+ Ted.listToolListLevelJustifyRight:	Do prawej
+ 
+-!== Ted.listToolLevelFollowedBy:		Separator
++Ted.listToolLevelFollowedBy:		Separator
+ Ted.listToolListLevelFollowTab:		Tabulacja
+ Ted.listToolListLevelFollowSpace:	Spacja
+ Ted.listToolListLevelFollowNone:	Brak
+@@ -2099,7 +2099,7 @@
+ Ted.formatToolTabs:			Tabulacje
+ 
+ Ted.formatToolChangeTabs:		Zmieñ tabulacjê
+-!Ted.tableToolRevert:			Revert
++!Ted.tableToolRevert:			Przywróæ
+ 
+ Ted.formatToolTabsNextPara:		Nastêpny akapit
+ Ted.formatToolTabsPreviousPara:		Poprzedni akapit
+@@ -2208,7 +2208,7 @@
+ 
+ Ted.formatToolSect:			Sekcja
+ Ted.formatToolChangeSect:		Zastosuj w sekcji
+-!Ted.tableToolRevert:			Revert
++!Ted.tableToolRevert:			Przywróæ
+ Ted.formatToolNextSect:			Nastêpna sekcja
+ Ted.formatToolPreviousSect:		Poprzednia sekcja
+ Ted.formatToolSelectSect:		Zaznacz sekcjê
+@@ -2216,16 +2216,16 @@
+ Ted.formatToolInsertSect:		Wstaw sekcjê
+ Ted.formatToolAppendSect:		Dodaj sekcjê
+ 
+-!Ted.unit:				inch
++!Ted.unit:				mm
+ 
+ Ted.formatToolSectNumberRestart:	Zacznij na pocz±tku strony
+ 
+ Ted.formatToolSectPageNumberStyle:	Styl numeracji stron
+-!== Ted.formatToolSectNumberStyleDec:	1, 2, 3
+-!== Ted.formatToolSectNumberStyleUcrm:	I, II, III
+-!== Ted.formatToolSectNumberStyleLcrm:	i, ii, iii
+-!== Ted.formatToolSectNumberStyleUcltr:	A, B, C
+-!== Ted.formatToolSectNumberStyleLcltr:	a, b, c
++Ted.formatToolSectNumberStyleDec:	1, 2, 3
++Ted.formatToolSectNumberStyleUcrm:	I, II, III
++Ted.formatToolSectNumberStyleLcrm:	i, ii, iii
++Ted.formatToolSectNumberStyleUcltr:	A, B, C
++Ted.formatToolSectNumberStyleLcltr:	a, b, c
+ 
+ Ted.formatToolSectBreakKind:		Pocz±tek sekcji
+ Ted.formatToolSectBreakKindNone:	Pod poprzedni±
+@@ -2324,7 +2324,7 @@
+ 
+ Ted.formatToolHeadFootSectionHeader:	W³a¶ciwo¶ci sekcji
+ Ted.formatToolHeadFootTitlepgText:	Inna pierwsza strona
+-!== Ted.formatToolHeadFootSectionNumber:	Section
++Ted.formatToolHeadFootSectionNumber:	Sekcja
+ Ted.formatToolHeadFootChangeSection:	Zastosuj w sekcji
+ Ted.formatToolHeadFootRevertSection:	Przywróæ
+ 
+@@ -2435,7 +2435,7 @@
+ Ted.formatToolNotes:			Przypisy
+ 
+ Ted.formatToolChangeNotes:		Zastosuj w dokumencie
+-!Ted.tableToolRevert:			Revert
++!Ted.tableToolRevert:			Przywróæ
+ 
+ Ted.formatToolThisNote:			Ten przypis
+ Ted.formatToolFootnotes:		Przypisy na dole
+@@ -2454,12 +2454,12 @@
+ Ted.formatToolNotesRestart:		Numeracja
+ Ted.formatToolNotesNumberStyle:		Format numeracji
+ 
+-!== Ted.formatToolNoteNumberStyleNar:	1, 2, 3
+-!== Ted.formatToolNoteNumberStyleNalc:	a, b, c
+-!== Ted.formatToolNoteNumberStyleNauc:	A, B, C
+-!== Ted.formatToolNoteNumberStyleNrlc:	i, ii, iii
+-!== Ted.formatToolNoteNumberStyleNruc:	I, II, III
+-!== Ted.formatToolNoteNumberStyleNchi:	*, +, #, $
++Ted.formatToolNoteNumberStyleNar:	1, 2, 3
++Ted.formatToolNoteNumberStyleNalc:	a, b, c
++Ted.formatToolNoteNumberStyleNauc:	A, B, C
++Ted.formatToolNoteNumberStyleNrlc:	i, ii, iii
++Ted.formatToolNoteNumberStyleNruc:	I, II, III
++Ted.formatToolNoteNumberStyleNchi:	*, +, #, $
+ 
+ Ted.formatToolNoteNumberingContinuous:	Ci±g³a
+ Ted.formatToolNoteNumberingPerSection:	W sekcji
+@@ -2593,19 +2593,19 @@
+ !!									!!
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+-!== Ted.imageToolImage:		Image
++Ted.imageToolImage:		Obrazek
+ 
+-!== Ted.imageToolChangeImage:	Apply to Image
+-!== Ted.imageToolRevert:		Revert
++Ted.imageToolChangeImage:	Zastosuj na obrazku
++Ted.imageToolRevert:		Przywróæ
+ 
+-!== Ted.imageToolPixelSize:		Pixel Size
+-!== Ted.imageToolTotalBytes:	Size in Bytes
++Ted.imageToolPixelSize:		Rozmiar w pikselach
++Ted.imageToolTotalBytes:	Rozmiar w bajtach
+ 
+-!== Ted.imageToolImageWide:		Image Wide
+-!== Ted.imageToolImageHigh:		Image High
++Ted.imageToolImageWide:		Szeroko¶æ obrazka
++Ted.imageToolImageHigh:		Wysoko¶æ obrazka
+ 
+-!== Ted.imageToolXScale:		Horizontal Scale (%)
+-!== Ted.imageToolYScale:		Vertical Scale (%)
++Ted.imageToolXScale:		Skalowanie poziome (%)
++Ted.imageToolYScale:		Skalowanie pionowe (%)
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!									!!
+@@ -2766,13 +2766,13 @@
+ Ted.printDialogCancel:			Anuluj
+ Ted.printDialogPrint:			Drukuj
+ Ted.printDialogPrintToFile:		Drukuj do pliku
+-!== Ted.printDialogFax:			Fax
++Ted.printDialogFax:			Fax
+ 
+ Ted.printDialogPaperSize:		Rozmiar papieru
+ Ted.printDialogCustomPaperSize:		W³asny
+ 
+ Ted.printDialogPlacement:		Rozmieszczenie
+-!== Ted.printDialogShowPlacementDrawing:	1
++Ted.printDialogShowPlacementDrawing:	1
+ 
+ Ted.printDialog_1_UpText:		1 strona na kartce
+ Ted.printDialog_1_ScaledText:		1 strona na kartce dopasowana
+@@ -2792,13 +2792,13 @@
+ Ted.printDialogFromPage:		Od
+ Ted.printDialogToPage:			Do
+ 
+-!== Ted.printDialogOddFacesOnly:		Odd Faces Only
+-!== Ted.printDialogEvenFacesOnly:		Even Faces Only
++Ted.printDialogOddFacesOnly:		Tylko strony nieparzyste
++Ted.printDialogEvenFacesOnly:		Tylko strony parzyste
+ 
+-!== Ted.printDialogFacesForward:		First to Last
+-!== Ted.printDialogFacesBackward:		Last to First
++Ted.printDialogFacesForward:		Od pierwszej do ostatniej
++Ted.printDialogFacesBackward:		Od ostatniej do pierwszej
+ 
+-!== Ted.printDialogPrinterCount:		15
++Ted.printDialogPrinterCount:		15
+ Ted.printDialogPrintersUp:		%d w³.
+ Ted.printDialogPrintersDown:		%d wy³.
+ 
+@@ -2854,8 +2854,8 @@
+ Ted.mailDialogSubject:		Temat
+ Ted.mailDialogTo:		Do
+ Ted.mailDialogFrom:		Od
+-!== Ted.mailDialogCc:		Cc
+-!== Ted.mailDialogBcc:		Bcc
++Ted.mailDialogCc:		Cc
++Ted.mailDialogBcc:		Bcc
+ 
+ Ted.mailDialogContent:		Typ zawarto¶ci
+ Ted.mailDialogNone:		Brak
+@@ -2869,10 +2869,10 @@
+ Ted.mailDialogNoFrom:		Trzeba podaæ nadawcê
+ 
+ Ted.mailPlain:			text/plain; charset=iso-8859-2
+-!== Ted.mailRtf:			application/rtf
++Ted.mailRtf:			application/rtf
+ Ted.mailHtml:			text/html; charset=iso-8859-2
+ 
+-!== Ted.mailHost:			localhost
++Ted.mailHost:			localhost
+ !Ted.mailPort:			(none)
+ 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+@@ -2943,7 +2943,7 @@
+ !!									!!
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+-!== Ted.propDialogGenerator:	Generator
++Ted.propDialogGenerator:	Generator
+ Ted.propDialogTitle:		Tytu³
+ Ted.propDialogAuthor:		Autor
+ Ted.propDialogCompany:		Organizacja
