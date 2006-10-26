@@ -7,69 +7,71 @@
 Summary:	Ted - easy rich text processor
 Summary(pl):	Ted - prosty procesor tekstu
 Name:		ted
-Version:	2.16
+Version:	2.17
 Release:	1
 License:	GPL
 Group:		X11/Applications/Editors
 Source0:	ftp://ftp.nluug.nl/pub/editors/ted/%{name}-%{version}.src.tar.gz
-# Source0-md5:	51f90201dbc117906a7c4cde691d4606
+# Source0-md5:	8adc2ab0a67954b2b5068c9be243c82d
 Source1:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_cs_CZ.tar.gz
-# Source1-md5:	5d654419e3466450e7b73ffd05efebbf
+# Source1-md5:	d0e5bb73ceda6398ff76e44893e15437
 Source2:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_da_DK.tar.gz
-# Source2-md5:	7e0730dee0caf533b5cbe3627a459939
+# Source2-md5:	710cbd18fca03b29cdeb0d7ed15480ee
 Source3:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_de_DE.tar.gz
-# Source3-md5:	ced06a498be16d7bb4148b7ae96500a4
+# Source3-md5:	896b464240f2a02128f92a7f652ec1c8
 Source4:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_en_GB.tar.gz
 # Source4-md5:	104408a5d5a515b6238a52a87c01d31f
 Source5:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_es_AR.tar.gz
-# Source5-md5:	546f412c0b9500559d5e815947aeb1f0
+# Source5-md5:	8cb7ba7ad35d48bb5a1315bc75b0685d
 Source6:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_es_ES.tar.gz
-# Source6-md5:	3c47ab39d07174f218a2c5945b8ea72f
+# Source6-md5:	37153f84ae05d25d418521a5f9650ef7
 Source7:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_eu_FR.tar.gz
-# Source7-md5:	cfdcbaca8df70fb59cda4bfa56713b79
+# Source7-md5:	6c23467ea1e6953f627d3ed8a78e7c15
 Source8:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_fr_FR.tar.gz
-# Source8-md5:	ce75da9caacd300c558b009223399363
+# Source8-md5:	45b8e048b1bcf55766ecf6e8852b153d
 Source9:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_hu_HU.tar.gz
-# Source9-md5:	9985453ce1b3170f8f04ee9f291a7476
+# Source9-md5:	75686a70dc892e68f554cbd0045cbc72
 Source10:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_it_IT.tar.gz
-# Source10-md5:	688d5df679d69a99e85d30b6a5c06e0d
+# Source10-md5:	7596605fc2986191c1bf2f0f35556d49
 Source11:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_mg_MG.tar.gz
-# Source11-md5:	2393e69231e0d973dbbbacf5a294ad59
+# Source11-md5:	2f42eed6105a6ba42b09efbb84686be8
 Source12:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_nl_NL.tar.gz
-# Source12-md5:	7db18dd2ae84fd7caf260119819d3b6b
+# Source12-md5:	4a2a707581b8c5589b0df2840f528595
 Source13:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_no_NO.tar.gz
-# Source13-md5:	328346a213fa14e4fbd8039b7c51afdb
+# Source13-md5:	1fc60a90e5d4a68a4e2db335b0e5e500
 Source14:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_oc_FR.tar.gz
-# Source14-md5:	33eb4842034fb39cc7940cd5fd308ae9
+# Source14-md5:	4149bcf3f56d03b7dfee724444da93e1
 Source15:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pl_PL.tar.gz
-# Source15-md5:	daff2d8acc935f98935603168e55a038
+# Source15-md5:	56dae2bd3c9d99a280c12bfeab1e4bd7
 Source16:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pt_BR.tar.gz
-# Source16-md5:	a3a37037d043a130071ed6e83a81a63d
+# Source16-md5:	6068db5077102768b6351ba24707ea59
 Source17:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_pt_PT.tar.gz
 # Source17-md5:	c56b9ca9e6b9d8849ced5b2de3872e65
 Source18:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_ru_RU.tar.gz
 # Source18-md5:	6677c6d7ed4d7a511b7cdd02df52dc9c
 Source19:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_sk_SK.tar.gz
-# Source19-md5:	443fb81c1de3109cae6239812aa2b933
+# Source19-md5:	c001543f5b6822b527e54435c97c14c4
 Source20:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_sl_SI.tar.gz
 # Source20-md5:	884c40f7eddab26d6b878521fb55b03d
 Source21:	ftp://ftp.nluug.nl/pub/editors/ted/Ted_sv_SE.tar.gz
-# Source21-md5: 1a61f9dccd1682581c33e8f99a66ba01
+# Source21-md5:	1a61f9dccd1682581c33e8f99a66ba01
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-gtklocale.patch
+Patch2:		%{name}-gtk.patch
+Patch3:		%{name}-pl.patch
 URL:		http://www.nllgg.nl/Ted/
-BuildRequires:	XFree86-devel >= 4.0
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	libpng-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	motif-devel
 BuildRequires:	pkgconfig
+BuildRequires:	xorg-lib-libXp-devel
+BuildRequires:	xorg-lib-libXpm-devel
+BuildRequires:	xorg-lib-libXmu-devel
 Requires:	%{name}-common = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
 
 %description
 Ted is a text processor running under X Window on Unix/Linux systems.
@@ -97,6 +99,7 @@ Ted z interfejsem opartym na GTK+, a nie na Motifie.
 Summary:	Common package for both Ted interfaces
 Summary(pl):	Wsp鏊ny pakiet dla obu interfejs闚 Teda
 Group:		X11/Applications/Editors
+Requires:	xorg-lib-libXt-devel >= 1.0.0
 
 %description common
 Common package for both Ted interfaces.
@@ -200,6 +203,19 @@ Italian (it_IT) spelling dictionary for Ted.
 %description spelling-it -l pl
 W這ski (it_IT) s這wnik ortograficzny dla Teda.
 
+%package spelling-nb
+Summary:	Norwegian spelling dictionary for Ted
+Summary(pl):	Norweski s這wnik ortograficzny dla Teda
+Group:		X11/Applications/Editors
+Requires:	%{name}-common = %{version}-%{release}
+Obsoletes:	ted-spelling-no
+
+%description spelling-nb
+Norwegian (nb_NO) spelling dictionary for Ted.
+
+%description spelling-nb -l pl
+Norweski (nb_NO) s這wnik ortograficzny dla Teda.
+
 %package spelling-nl
 Summary:	Dutch spelling dictionary for Ted
 Summary(pl):	Holenderski s這wnik ortograficzny dla Teda
@@ -211,18 +227,6 @@ Dutch (nl_NL) spelling dictionary for Ted.
 
 %description spelling-nl -l pl
 Holenderski (nl_NL) s這wnik ortograficzny dla Teda.
-
-%package spelling-no
-Summary:	Norwegian spelling dictionary for Ted
-Summary(pl):	Norweski s這wnik ortograficzny dla Teda
-Group:		X11/Applications/Editors
-Requires:	%{name}-common = %{version}-%{release}
-
-%description spelling-no
-Norwegian (no_NO) spelling dictionary for Ted.
-
-%description spelling-no -l pl
-Norweski (no_NO) s這wnik ortograficzny dla Teda.
 
 %package spelling-pl
 Summary:	Polish spelling dictionary for Ted
@@ -300,11 +304,22 @@ Szwedzki (sv_SE) s這wnik ortograficzny dla Teda.
 %setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+
+cd tedPackage
+tar xf TedBindist.tar
+cd ../Ted/ad
+for f in *.tar ; do
+	tar xf "$f"
+done
+mv -f usr/lib/X11/{no_NO,nb_NO}
+cd ../..
+%patch3 -p1
 
 %build
 for d in bitmap ind libreg appUtil appFrame Ted; do
 	cd $d
-	autoconf
+	%{__autoconf}
 	%configure \
 		--with-MOTIF
 	cd ..
@@ -325,10 +340,6 @@ done
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/Ted/{afm,ind}}
 
-cd tedPackage
-tar xf TedBindist.tar
-cd ..
-
 install Ted.motif $RPM_BUILD_ROOT%{_bindir}/Ted
 install Ted/Ted $RPM_BUILD_ROOT%{_bindir}/Ted.gtk
 install tedPackage/afm/* $RPM_BUILD_ROOT%{_datadir}/Ted/afm
@@ -339,26 +350,23 @@ cd Ted
 install TedDocument-*.rtf $RPM_BUILD_ROOT%{_datadir}/Ted
 cd ad
 # pt is pt_BR here, but there is no pt_PT translation
-for f in cs da de eu fr hu it mg nl no oc pl pt sk ; do
-	tar xf Ted_${f}_*.tar
-	install -d $RPM_BUILD_ROOT%{_appdefsdir}/${f}
+for f in cs da de eu fr hu it mg nb nl oc pl pt sk ; do
+	install -d $RPM_BUILD_ROOT%{_datadir}/X11/${f}/app-defaults
 	# comment out evil paths
 	sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/${f}_*/app-defaults/Ted \
-		> $RPM_BUILD_ROOT%{_appdefsdir}/${f}/Ted
+		> $RPM_BUILD_ROOT%{_datadir}/X11/${f}/app-defaults/Ted
 done
 # special case
-tar xf Ted_es_AR.ad.tar
-install -d $RPM_BUILD_ROOT%{_appdefsdir}/es_AR
+install -d $RPM_BUILD_ROOT%{_datadir}/X11/es_AR/app-defaults
 sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/es_AR/app-defaults/Ted \
-	> $RPM_BUILD_ROOT%{_appdefsdir}/es_AR/Ted
-tar xf Ted_es_ES.ad.tar
-install -d $RPM_BUILD_ROOT%{_appdefsdir}/es
+	> $RPM_BUILD_ROOT%{_datadir}/X11/es_AR/app-defaults/Ted
+install -d $RPM_BUILD_ROOT%{_datadir}/X11/es/app-defaults
 sed -e 's@^\(Ted.*/usr\)@!\1@' usr/lib/X11/es_AR/app-defaults/Ted \
-	> $RPM_BUILD_ROOT%{_appdefsdir}/es/Ted
+	> $RPM_BUILD_ROOT%{_datadir}/X11/es/app-defaults/Ted
 
 # use latin2 font for pl_PL messages
 echo 'Ted*fontList:	-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2' \
-	>> $RPM_BUILD_ROOT%{_appdefsdir}/pl/Ted
+	>> $RPM_BUILD_ROOT%{_datadir}/X11/pl/app-defaults/Ted
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -381,22 +389,22 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/Ted/TedDocument-en_US.rtf
 %lang(fr) %{_datadir}/Ted/TedDocument-fr_FR.rtf
 %lang(mg) %{_datadir}/Ted/TedDocument-mg_MG.rtf
-%lang(cs) %{_appdefsdir}/cs/Ted
-%lang(da) %{_appdefsdir}/da/Ted
-%lang(de) %{_appdefsdir}/de/Ted
-%lang(es) %{_appdefsdir}/es/Ted
-%lang(es_AR) %{_appdefsdir}/es_AR/Ted
-%lang(eu) %{_appdefsdir}/eu/Ted
-%lang(fr) %{_appdefsdir}/fr/Ted
-%lang(hu) %{_appdefsdir}/hu/Ted
-%lang(it) %{_appdefsdir}/it/Ted
-%lang(mg) %{_appdefsdir}/mg/Ted
-%lang(nl) %{_appdefsdir}/nl/Ted
-%lang(nb) %{_appdefsdir}/no/Ted
-%lang(oc) %{_appdefsdir}/oc/Ted
-%lang(pl) %{_appdefsdir}/pl/Ted
-%lang(pt) %{_appdefsdir}/pt/Ted
-%lang(sk) %{_appdefsdir}/sk/Ted
+%lang(cs) %{_datadir}/X11/cs/app-defaults/Ted
+%lang(da) %{_datadir}/X11/da/app-defaults/Ted
+%lang(de) %{_datadir}/X11/de/app-defaults/Ted
+%lang(es) %{_datadir}/X11/es/app-defaults/Ted
+%lang(es_AR) %{_datadir}/X11/es_AR/app-defaults/Ted
+%lang(eu) %{_datadir}/X11/eu/app-defaults/Ted
+%lang(fr) %{_datadir}/X11/fr/app-defaults/Ted
+%lang(hu) %{_datadir}/X11/hu/app-defaults/Ted
+%lang(it) %{_datadir}/X11/it/app-defaults/Ted
+%lang(mg) %{_datadir}/X11/mg/app-defaults/Ted
+%lang(nb) %{_datadir}/X11/nb/app-defaults/Ted
+%lang(nl) %{_datadir}/X11/nl/app-defaults/Ted
+%lang(oc) %{_datadir}/X11/oc/app-defaults/Ted
+%lang(pl) %{_datadir}/X11/pl/app-defaults/Ted
+%lang(pt) %{_datadir}/X11/pt/app-defaults/Ted
+%lang(sk) %{_datadir}/X11/sk/app-defaults/Ted
 
 %files spelling-cs
 %defattr(644,root,root,755)
@@ -430,13 +438,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/Ted/ind/Italian.ind
 
+%files spelling-nb
+%defattr(644,root,root,755)
+%{_datadir}/Ted/ind/Norwegian.ind
+
 %files spelling-nl
 %defattr(644,root,root,755)
 %{_datadir}/Ted/ind/Dutch.ind
-
-%files spelling-no
-%defattr(644,root,root,755)
-%{_datadir}/Ted/ind/Norwegian.ind
 
 %files spelling-pl
 %defattr(644,root,root,755)
