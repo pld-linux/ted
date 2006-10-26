@@ -1,0 +1,26 @@
+--- Ted-2.17/Ted/tedListTool.c.orig	2005-01-27 07:16:08.000000000 +0100
++++ Ted-2.17/Ted/tedListTool.c	2006-10-25 23:43:35.244341000 +0200
+@@ -1422,12 +1422,12 @@
+     return;
+     }
+ 
+-#   ifdef USE_MOTIF
+ static void appMakeHBoxInRow(		APP_WIDGET *	pHBox,
+ 					APP_WIDGET	row,
+ 					int		position,
+ 					int		colspan )
+     {
++#   ifdef USE_MOTIF
+     Arg			al[20];
+     int			ac= 0;
+ 
+@@ -1452,8 +1452,8 @@
+     XtManageChild( hbox );
+ 
+     *pHBox= hbox; return;
+-    }
+ #   endif
++    }
+ 
+ static void appMakeLabelAndRowRow(	APP_WIDGET *		pRow,
+ 					APP_WIDGET *		pLabel,
