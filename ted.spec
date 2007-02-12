@@ -5,7 +5,7 @@
 #       gtk+2 expects utf-8)
 #
 Summary:	Ted - easy rich text processor
-Summary(pl):	Ted - prosty procesor tekstu
+Summary(pl.UTF-8):   Ted - prosty procesor tekstu
 Name:		ted
 Version:	2.17
 Release:	1
@@ -78,134 +78,134 @@ Ted is a text processor running under X Window on Unix/Linux systems.
 It was made to edit rich text documents on Unix/Linux in a WYSIWYG
 way. It can edit MS RTF files and print to PostScript.
 
-%description -l pl
-Ted jest procesorem tekstu dzia≥aj±cym pod X Window pod unices. S≥uøy
-do edycji dokumentÛw tekstowych w stylu WYSIWYG. Moøe obrabiaÊ pliki w
-formacie MS RTF i drukowaÊ w PostScripcie.
+%description -l pl.UTF-8
+Ted jest procesorem tekstu dzia≈ÇajƒÖcym pod X Window pod unices. S≈Çu≈ºy
+do edycji dokument√≥w tekstowych w stylu WYSIWYG. Mo≈ºe obrabiaƒá pliki w
+formacie MS RTF i drukowaƒá w PostScripcie.
 
 %package gtk
 Summary:	Ted with GTK+-based interface
-Summary(pl):	Ted z interfejsem opartym na GTK+
+Summary(pl.UTF-8):   Ted z interfejsem opartym na GTK+
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description gtk
 Ted with interface based on GTK+ instead of Motif.
 
-%description gtk -l pl
+%description gtk -l pl.UTF-8
 Ted z interfejsem opartym na GTK+, a nie na Motifie.
 
 %package common
 Summary:	Common package for both Ted interfaces
-Summary(pl):	WspÛlny pakiet dla obu interfejsÛw Teda
+Summary(pl.UTF-8):   Wsp√≥lny pakiet dla obu interfejs√≥w Teda
 Group:		X11/Applications/Editors
 Requires:	xorg-lib-libXt-devel >= 1.0.0
 
 %description common
 Common package for both Ted interfaces.
 
-%description common -l pl
-WspÛlny pakiet dla obu interfejsÛw Teda.
+%description common -l pl.UTF-8
+Wsp√≥lny pakiet dla obu interfejs√≥w Teda.
 
 %package spelling-cs
 Summary:	Czech spelling dictionary for Ted
-Summary(pl):	Czeski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Czeski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-cs
 Czech (cs_CZ) spelling dictionary for Ted.
 
-%description spelling-cs -l pl
-Czeski (cs_CZ) s≥ownik ortograficzny dla Teda.
+%description spelling-cs -l pl.UTF-8
+Czeski (cs_CZ) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-da
 Summary:	Danish spelling dictionary for Ted
-Summary(pl):	DuÒski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Du≈Ñski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-da
 Danish (da_DK) spelling dictionary for Ted.
 
-%description spelling-da -l pl
-DuÒski (da_DK) s≥ownik ortograficzny dla Teda.
+%description spelling-da -l pl.UTF-8
+Du≈Ñski (da_DK) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-de
 Summary:	German spelling dictionary for Ted
-Summary(pl):	Niemiecki s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Niemiecki s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-de
 German (de_DE) spelling dictionary for Ted.
 
-%description spelling-da -l pl
-Niemiecki (de_DE) s≥ownik ortograficzny dla Teda.
+%description spelling-da -l pl.UTF-8
+Niemiecki (de_DE) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-en_GB
 Summary:	English (UK) spelling dictionary for Ted
-Summary(pl):	Angielski (brytyjski) s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Angielski (brytyjski) s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-en_GB
 English (UK - en_GB) spelling dictionary for Ted.
 
-%description spelling-en_GB -l pl
-Angielski (brytyjski - en_GB) s≥ownik ortograficzny dla Teda.
+%description spelling-en_GB -l pl.UTF-8
+Angielski (brytyjski - en_GB) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-en_US
 Summary:	English (US) spelling dictionary for Ted
-Summary(pl):	Angielski (amerykaÒski) s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Angielski (ameryka≈Ñski) s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-en_US
 English (en_US) spelling dictionary for Ted.
 
-%description spelling-en_US -l pl
-Angielski (amerykaÒski - en_US) s≥ownik ortograficzny dla Teda.
+%description spelling-en_US -l pl.UTF-8
+Angielski (ameryka≈Ñski - en_US) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-es
 Summary:	Spanish spelling dictionary for Ted
-Summary(pl):	HiszpaÒski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Hiszpa≈Ñski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-es
 Spanish (es_ES) spelling dictionary for Ted.
 
-%description spelling-es -l pl
-HiszpaÒski (es_ES) s≥ownik ortograficzny dla Teda.
+%description spelling-es -l pl.UTF-8
+Hiszpa≈Ñski (es_ES) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-fr
 Summary:	French spelling dictionary for Ted
-Summary(pl):	Francuski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Francuski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-fr
 French (fr_FR) spelling dictionary for Ted.
 
-%description spelling-fr -l pl
-Francuski (fr_FR) s≥ownik ortograficzny dla Teda.
+%description spelling-fr -l pl.UTF-8
+Francuski (fr_FR) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-it
 Summary:	Italian spelling dictionary for Ted
-Summary(pl):	W≥oski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   W≈Çoski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-it
 Italian (it_IT) spelling dictionary for Ted.
 
-%description spelling-it -l pl
-W≥oski (it_IT) s≥ownik ortograficzny dla Teda.
+%description spelling-it -l pl.UTF-8
+W≈Çoski (it_IT) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-nb
 Summary:	Norwegian spelling dictionary for Ted
-Summary(pl):	Norweski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Norweski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 Obsoletes:	ted-spelling-no
@@ -213,92 +213,92 @@ Obsoletes:	ted-spelling-no
 %description spelling-nb
 Norwegian (nb_NO) spelling dictionary for Ted.
 
-%description spelling-nb -l pl
-Norweski (nb_NO) s≥ownik ortograficzny dla Teda.
+%description spelling-nb -l pl.UTF-8
+Norweski (nb_NO) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-nl
 Summary:	Dutch spelling dictionary for Ted
-Summary(pl):	Holenderski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Holenderski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-nl
 Dutch (nl_NL) spelling dictionary for Ted.
 
-%description spelling-nl -l pl
-Holenderski (nl_NL) s≥ownik ortograficzny dla Teda.
+%description spelling-nl -l pl.UTF-8
+Holenderski (nl_NL) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-pl
 Summary:	Polish spelling dictionary for Ted
-Summary(pl):	Polski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Polski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-pl
 Polish (pl_PL) spelling dictionary for Ted.
 
-%description spelling-pl -l pl
-Polski (pl_PL) s≥ownik ortograficzny dla Teda.
+%description spelling-pl -l pl.UTF-8
+Polski (pl_PL) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-pt
 Summary:	Portuguese spelling dictionary for Ted
-Summary(pl):	Portugalski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Portugalski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-pt
 Portuguese (pt_PT) spelling dictionary for Ted.
 
-%description spelling-pt -l pl
-Portugalski (pt_PT) s≥ownik ortograficzny dla Teda.
+%description spelling-pt -l pl.UTF-8
+Portugalski (pt_PT) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-ru
 Summary:	Russian spelling dictionary for Ted
-Summary(pl):	Rosyjski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Rosyjski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-ru
 Russian (ru_RU) spelling dictionary for Ted.
 
-%description spelling-ru -l pl
-Rosyjski (ru_RU) s≥ownik ortograficzny dla Teda.
+%description spelling-ru -l pl.UTF-8
+Rosyjski (ru_RU) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-sk
 Summary:	Slovak spelling dictionary for Ted
-Summary(pl):	S≥owacki s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   S≈Çowacki s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-sk
 Slovak (sk_SK) spelling dictionary for Ted.
 
-%description spelling-sk -l pl
-S≥owacki (sk_SK) s≥ownik ortograficzny dla Teda.
+%description spelling-sk -l pl.UTF-8
+S≈Çowacki (sk_SK) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-sl
 Summary:	Slovene spelling dictionary for Ted
-Summary(pl):	S≥oweÒski s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   S≈Çowe≈Ñski s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-sl
 Slovene (sl_SI) spelling dictionary for Ted.
 
-%description spelling-sl -l pl
-S≥oweÒski (sl_SI) s≥ownik ortograficzny dla Teda.
+%description spelling-sl -l pl.UTF-8
+S≈Çowe≈Ñski (sl_SI) s≈Çownik ortograficzny dla Teda.
 
 %package spelling-sv
 Summary:	Swedish spelling dictionary for Ted
-Summary(pl):	Szwedzki s≥ownik ortograficzny dla Teda
+Summary(pl.UTF-8):   Szwedzki s≈Çownik ortograficzny dla Teda
 Group:		X11/Applications/Editors
 Requires:	%{name}-common = %{version}-%{release}
 
 %description spelling-sv
 Swedish (sv_SE) spelling dictionary for Ted.
 
-%description spelling-sv -l pl
-Szwedzki (sv_SE) s≥ownik ortograficzny dla Teda.
+%description spelling-sv -l pl.UTF-8
+Szwedzki (sv_SE) s≈Çownik ortograficzny dla Teda.
 
 %prep
 %setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21
