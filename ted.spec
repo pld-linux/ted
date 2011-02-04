@@ -140,7 +140,7 @@ Requires:	%{name}-common = %{version}-%{release}
 %description spelling-de
 German (de_DE) spelling dictionary for Ted.
 
-%description spelling-da -l pl.UTF-8
+%description spelling-de -l pl.UTF-8
 Niemiecki (de_DE) słownik ortograficzny dla Teda.
 
 %package spelling-en_GB
