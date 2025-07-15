@@ -303,9 +303,9 @@ Szwedzki (sv_SE) słownik ortograficzny dla Teda.
 
 %prep
 %setup -q -n Ted-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 cd tedPackage
 tar xf TedBindist.tar
@@ -315,8 +315,8 @@ for f in *.tar ; do
 done
 mv -f usr/lib/X11/{no_NO,nb_NO}
 cd ../..
-%patch3 -p1
-%patch4 -p0
+%patch -P3 -p1
+%patch -P4 -p0
 
 
 %build
